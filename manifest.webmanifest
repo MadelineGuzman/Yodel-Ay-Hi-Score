@@ -1,0 +1,12 @@
+{
+  "name": "Yodel-Ay-Hi-Score",
+  "short_name": "Yodel-Ay-Hi-Score",
+  "id": "com.example.gamename",
+  "description": "\"Yodel your way to the top of the mountain. Scream loud, float high, dodge rocks. Mic required.\"",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
