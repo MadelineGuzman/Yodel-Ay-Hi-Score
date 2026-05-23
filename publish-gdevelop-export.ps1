@@ -175,7 +175,12 @@ if (Test-Path -LiteralPath $pixiPath) {
 $dataPath = Join-Path $workspace "data.js"
 $data = Get-Content -Raw -LiteralPath $dataPath
 $data = $data.Replace("\\Yodel_1", "").Replace("\Yodel_1", "")
+
+# Fix canvas centering: GDevelop exports sizeOnStartupMode as "adaptWidth" which
+# pins the canvas to the left edge. "noChanges" lets the runtime center it correctly.
+$data = $data.Replace('"sizeOnStartupMode":"adaptWidth"', '"sizeOnStartupMode":"noChanges"')
 Set-Content -LiteralPath $dataPath -Value $data -NoNewline
+Write-Host "Fixed sizeOnStartupMode for centered canvas."
 
 # Verify exported resources resolve from the Pages root.
 $missingExportResources = @()
