@@ -6549,7 +6549,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9991260522560631,
+        "zoomFactor": 0.9045052888202679,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -11041,7 +11041,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.32353131685765274,
+        "zoomFactor": 0.4080728757367233,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -11719,23 +11719,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 95,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Shroom",
-          "persistentUuid": "31b74ae8-0c28-4079-a7b5-25357311f823",
-          "width": 96,
-          "x": 211,
-          "y": -2683,
-          "zOrder": 53,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -11878,7 +11861,7 @@
           "width": 139,
           "x": 2,
           "y": -3034,
-          "zOrder": 60,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
