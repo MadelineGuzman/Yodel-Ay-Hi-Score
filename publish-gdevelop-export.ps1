@@ -201,6 +201,53 @@ $data = $data.Replace('"sizeOnStartupMode":"adaptWidth"', '"sizeOnStartupMode":"
 Set-Content -LiteralPath $dataPath -Value $data -NoNewline
 Write-Host "Fixed sizeOnStartupMode for centered canvas."
 
+# GDevelop's cursor-on-object check can still hit hidden objects. On itch.io,
+# the click/touch used to start the iframe can carry into LEVEL 1 and trigger
+# the hidden next-level button unless we also require the button to be visible.
+$level1CodePath = Join-Path $workspace "code2.js"
+if (Test-Path -LiteralPath $level1CodePath) {
+    $level1Code = Get-Content -Raw -LiteralPath $level1CodePath
+    if ($level1Code -notmatch 'GDNEXT_9595LEVEL_9595BUTTONObjects1\[i\]\.isVisible\(\)') {
+        $hiddenButtonGuardPattern = @'
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LEVEL_321Code.mapOfGDgdjs_9546LEVEL_9595321Code_9546GDNEXT_95959595LEVEL_95959595BUTTONObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getScene().getVariables().getFromIndex(0).getAsBoolean();
+}
+}
+}
+if (isConditionTrue_0) {
+'@
+        $hiddenButtonGuardReplacement = @'
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LEVEL_321Code.mapOfGDgdjs_9546LEVEL_9595321Code_9546GDNEXT_95959595LEVEL_95959595BUTTONObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1.length;i<l;++i) {
+    if ( gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1[i].isVisible() ) {
+        isConditionTrue_0 = true;
+        gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1[k] = gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1[i];
+        ++k;
+    }
+}
+gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = !runtimeScene.getScene().getVariables().getFromIndex(0).getAsBoolean();
+}
+}
+}
+}
+if (isConditionTrue_0) {
+'@
+        if (-not $level1Code.Contains($hiddenButtonGuardPattern)) {
+            throw "Could not patch LEVEL 1 hidden next-level button guard in code2.js."
+        }
+        $level1Code = $level1Code.Replace($hiddenButtonGuardPattern, $hiddenButtonGuardReplacement)
+        Set-Content -LiteralPath $level1CodePath -Value $level1Code -NoNewline
+        Write-Host "Patched LEVEL 1 hidden next-level button guard."
+    }
+}
+
 # Verify exported resources resolve from the Pages root.
 $missingExportResources = @()
 $resourceFiles = Get-ResourceFiles -DataJsPath $dataPath

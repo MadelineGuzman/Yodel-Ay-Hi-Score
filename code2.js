@@ -468,7 +468,18 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.LEVEL_321Code.mapOfGDgdjs_9546LEVEL_9595321Code_9546GDNEXT_95959595LEVEL_95959595BUTTONObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1.length;i<l;++i) {
+    if ( gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1[i].isVisible() ) {
+        isConditionTrue_0 = true;
+        gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1[k] = gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1[i];
+        ++k;
+    }
+}
+gdjs.LEVEL_321Code.GDNEXT_9595LEVEL_9595BUTTONObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
 {isConditionTrue_0 = !runtimeScene.getScene().getVariables().getFromIndex(0).getAsBoolean();
+}
 }
 }
 }
