@@ -1,33 +1,85 @@
-# Yodel-Ay-Hi-Score
+# 🏔️ Yodel-Ay-Hi-Score!
 
-GDevelop HTML5 export for **Yodel-Ay-Hi-Score**.
+> **Yodel your way to the top of the mountain — and beyond.**
 
-## Local Testing
+A voice-controlled vertical platformer built in GDevelop for a game jam. Scream, yodel, or just breathe loud enough and your little goat will fly. The mountain goes all the way up. So do you.
 
-Run a local web server from this repository root:
+**▶️ [Play it now](https://madelineguzman.github.io/Yodel-Ay-Hi-Score/)**
+
+---
+
+## How to Play
+
+| Input | Action |
+|---|---|
+| **Yell / yodel / make noise** | Jump (louder = higher) |
+| **← →** or **A / D** | Move left / right |
+| Reach the top of each level | Advance to the next |
+
+> **Microphone permission is required.** Your browser will ask — allow it. Nothing is recorded or transmitted; volume level is read locally in-browser.
+
+---
+
+## Levels
+
+| Level | Setting | Collectible | Hazards |
+|---|---|---|---|
+| 1 | Snowy mountain base camp | 🌸 Flowers | — |
+| 2 | Icy ascent | 🍄 Icy mushrooms | Falling rocks, moving platforms |
+| 3 | Atmosphere / space | ⭐ Stars | — |
+| Finale | Outer space | — | Escape in the UFO |
+
+---
+
+## Tech Stack
+
+- **Engine:** [GDevelop](https://gdevelop.io/) (HTML5 export)
+- **Renderer:** PixiJS (bundled by GDevelop)
+- **Audio:** Howler.js (bundled by GDevelop)
+- **Microphone input:** Web Audio API via GDevelop MicrophoneInput extension
+- **Hosting:** GitHub Pages (branch: `main`, root folder)
+
+---
+
+## Local Development
+
+Microphone access requires a secure context — don't open `index.html` directly with `file://`. Use a local server:
 
 ```powershell
 py -m http.server 8000 --bind 127.0.0.1
 ```
 
-Then open:
+Then open **http://127.0.0.1:8000**
 
-```text
-http://127.0.0.1:8000/
+---
+
+## Publishing a New Export
+
+After exporting from the GDevelop editor to a local folder:
+
+```powershell
+# Promote the export to the repo root (dry run: omit -Stage to preview)
+.\publish-gdevelop-export.ps1 .\Yodel_1
+
+# Stage everything for commit when ready
+.\publish-gdevelop-export.ps1 .\Yodel_1 -Stage
 ```
 
-Do not open `index.html` directly with `file://`; browser APIs used by the game, especially microphone access, need a proper web origin.
+The script:
+- Promotes runtime files to the repo root (where GitHub Pages serves from)
+- Preserves the GDevelop `.json` project file, `assets/`, and repo files
+- Removes stale media and scene scripts from previous exports
+- Reapplies the centered canvas CSS and PIXI global shim (overwritten by GDevelop on each export)
+- Validates that all referenced resources resolve before finishing
 
-## GitHub Pages
+---
 
-Use GitHub Pages with:
+## GitHub Pages Setup
 
-- Source: `Deploy from a branch`
+- Source: **Deploy from a branch**
 - Branch: `main`
 - Folder: `/ (root)`
 
-The build root is this repository root, where `index.html`, `data.js`, `code*.js`, `pixi-renderers/`, `Extensions/`, and the exported assets live.
+---
 
-## Microphone
-
-Microphone access requires a secure browser context. `localhost` and `127.0.0.1` are valid for local testing, and GitHub Pages serves over HTTPS for hosted testing.
+*Made with ☕ and questionable vocal choices by Syzygy Gaming.*
