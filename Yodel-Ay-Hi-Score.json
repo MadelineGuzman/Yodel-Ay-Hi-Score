@@ -24,7 +24,7 @@
     "author": " Syzygy Entertainment",
     "windowWidth": 800,
     "windowHeight": 780,
-    "latestCompilationDirectory": "C:\\Users\\madel\\Documents\\GitHub\\Syzygy Gaming\\Yodel-Ay-Hi-Score",
+    "latestCompilationDirectory": "C:\\Users\\madel\\Documents\\GitHub\\Syzygy Gaming\\Yodel-Ay-Hi-Score\\Yodel_1",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -10090,7 +10090,7 @@
               },
               "parameters": [
                 "Player",
-                "Base_Camp_Fire",
+                "Secret_Tunnel",
                 "",
                 "",
                 ""
