@@ -39,6 +39,20 @@ function Get-ResourceFiles {
     return $files
 }
 
+function Get-ProjectResourceFiles {
+    param([string] $ProjectPath)
+    $project = Get-Content -Raw -LiteralPath $ProjectPath
+    $matches = [regex]::Matches($project, '"file"\s*:\s*"([^"]+)"')
+    $files = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($match in $matches) {
+        $file = $match.Groups[1].Value.Replace("/", "\")
+        if ($file) {
+            $files.Add($file)
+        }
+    }
+    return $files
+}
+
 function New-NameSet {
     param([object[]] $Names = @())
     $set = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
@@ -103,7 +117,12 @@ Get-ChildItem -Force -LiteralPath $export | ForEach-Object {
 
 # Remove stale top-level media files that are no longer referenced by the new export.
 $resourceFiles = Get-ResourceFiles -DataJsPath (Join-Path $workspace "data.js")
-$resourceNames = New-NameSet ($resourceFiles | ForEach-Object { [IO.Path]::GetFileName($_) })
+$projectPath = Join-Path $workspace "Yodel-Ay-Hi-Score.json"
+$projectResourceFiles = @()
+if (Test-Path -LiteralPath $projectPath) {
+    $projectResourceFiles = Get-ProjectResourceFiles -ProjectPath $projectPath
+}
+$resourceNames = New-NameSet (($resourceFiles + $projectResourceFiles) | ForEach-Object { [IO.Path]::GetFileName($_) })
 $mediaExtensions = New-NameSet @(".png", ".jpg", ".jpeg", ".webp", ".gif", ".ttf", ".fnt", ".mp3", ".wav", ".ogg", ".mp4", ".webm")
 
 Get-ChildItem -File -LiteralPath $workspace | ForEach-Object {
@@ -196,13 +215,9 @@ if ($missingExportResources.Count -gt 0) {
 Write-Host "Export resource check passed."
 
 # Verify GDevelop editor resources still resolve. This protects the assets/ folder.
-$projectPath = Join-Path $workspace "Yodel-Ay-Hi-Score.json"
 if (Test-Path -LiteralPath $projectPath) {
-    $project = Get-Content -Raw -LiteralPath $projectPath
-    $projectRefs = [regex]::Matches($project, '"file"\s*:\s*"([^"]+)"')
     $missingProjectResources = @()
-    foreach ($match in $projectRefs) {
-        $resource = $match.Groups[1].Value.Replace("/", "\")
+    foreach ($resource in (Get-ProjectResourceFiles -ProjectPath $projectPath)) {
         if ($resource -and -not (Test-Path -LiteralPath (Join-Path $workspace $resource))) {
             $missingProjectResources += $resource
         }
