@@ -16,10 +16,10 @@
     "pixelsRounding": false,
     "projectUuid": "d8300f43-dc93-4822-b7f4-a333798c7914",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "noChanges",
     "templateSlug": "",
     "version": "1.0.0",
-    "name": "Yodel-Ay-Hi-Score - Copy",
+    "name": "Yodel-Ay-Hi-Score",
     "description": "\"Yodel your way to the top of the mountain. Scream loud, float high, dodge rocks. Mic required.\"",
     "author": " Syzygy Entertainment",
     "windowWidth": 800,
@@ -6152,63 +6152,6 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KS97CDHPHQPRETWJ0K6CHYVW",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "100"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "650"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene3D::SetCameraZ"
-              },
-              "parameters": [
-                "",
-                "=",
-                "Player.Y() - 250",
-                "",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetGameResolutionResizeMode"
-              },
-              "parameters": [
-                "",
-                "\"\""
-              ]
-            }
-          ]
-        },
-        {
           "aiGeneratedEventId": "01KRRBP0NWW9FJAA44HKRYHACF",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -10232,60 +10175,6 @@
                 "Player",
                 "PlatformerObject",
                 "\"Right\""
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KS97CP7FHAWKRRE4281BYCZK",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetGameResolutionResizeMode"
-              },
-              "parameters": [
-                "",
-                "\"\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"RockSpawnTimer\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "PlatformMove",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "TotalCollectibles",
-                "=",
-                "5"
               ]
             }
           ]
@@ -15009,7 +14898,7 @@
       },
       "events": [
         {
-          "aiGeneratedEventId": "01KS97CYVH2X5Y7JK1VN8ZWYG9",
+          "aiGeneratedEventId": "01KS982ZDRWV2P3DASWT8AS732",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -15059,15 +14948,6 @@
               },
               "parameters": [
                 "Continue_Text"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetGameResolutionResizeMode"
-              },
-              "parameters": [
-                "",
-                "\"\""
               ]
             }
           ]
