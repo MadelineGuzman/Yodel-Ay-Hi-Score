@@ -174,7 +174,7 @@ if (Test-Path -LiteralPath $pixiPath) {
 # Remove stale local export-folder metadata from data.js.
 $dataPath = Join-Path $workspace "data.js"
 $data = Get-Content -Raw -LiteralPath $dataPath
-$data = $data.Replace("\Yodel_1", "")
+$data = $data.Replace("\\Yodel_1", "").Replace("\Yodel_1", "")
 Set-Content -LiteralPath $dataPath -Value $data -NoNewline
 
 # Verify exported resources resolve from the Pages root.

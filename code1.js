@@ -305,15 +305,11 @@ gdjs.LEVEL_322Code.GDPlayerObjects1.length = k;
 if (isConditionTrue_0) {
 /* Reuse gdjs.LEVEL_322Code.GDPlayerObjects1 */
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setJumpSpeed(400 + (runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber() - 0.15) / 0.85 * 1500);
+    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setJumpSpeed(900 + (runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber() - 0.15) / 0.85 * 5000);
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
     gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").simulateJumpKey();
-}
-}
-{for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setGravity(100);
 }
 }
 }
@@ -421,6 +417,23 @@ gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.LEVEL_322Code.GDPlayerObj
 
 
 let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.LEVEL_322Code.GDPlayerObjects1);
+{for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setGravity(1000);
+}
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.LEVEL_322Code.GDPlayerObjects1);
 {gdjs.evtTools.camera.setCameraY(runtimeScene, (( gdjs.LEVEL_322Code.GDPlayerObjects1.length === 0 ) ? 0 :gdjs.LEVEL_322Code.GDPlayerObjects1[0].getPointY("")) - 250, "", 0);
@@ -438,11 +451,6 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber() < 0.15);
 }
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.LEVEL_322Code.GDPlayerObjects1);
-{for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setGravity(1500);
-}
-}
 }
 
 }

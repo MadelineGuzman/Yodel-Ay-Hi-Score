@@ -1599,6 +1599,22 @@
         "name": "Play_Again.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "Sliding_Bar_E.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sliding_Bar_E.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sliding_Bar_F.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sliding_Bar_F.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -6016,7 +6032,7 @@
       },
       "events": [
         {
-          "aiGeneratedEventId": "01KSA8XG1R172FXA4QKR49GD0P",
+          "aiGeneratedEventId": "01KSAK90RZ4SGKFQXWSC4E60CM",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6094,6 +6110,17 @@
               },
               "parameters": [
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "500"
               ]
             }
           ]
@@ -6282,7 +6309,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPVJSK3GZ84SX9156T5R6CB",
+          "aiGeneratedEventId": "01KSAK88W5VP29FBBWPRWM5C35",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6314,7 +6341,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "400 + (MicVolume - 0.15) / 0.85 * 1500"
+                "900 + (MicVolume - 0.15) / 0.85 * 2500"
               ]
             },
             {
@@ -6324,17 +6351,6 @@
               "parameters": [
                 "Player",
                 "PlatformerObject"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "100"
               ]
             }
           ]
@@ -6359,7 +6375,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPVK4H2E9AJXB1MKMTT7Z0C",
+          "aiGeneratedEventId": "01KSAK8PFA456GPAEGEC3656RX",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6373,19 +6389,7 @@
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "1500"
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "aiGeneratedEventId": "01KRRCYNW9FQXSNVBVW7CA1AZV",
@@ -10464,7 +10468,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPVJSK3GZ84SX9156T5R6CB",
+          "aiGeneratedEventId": "01KSAK9WEN3Q3W3B308FR42XCQ",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10496,7 +10500,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "400 + (MicVolume - 0.15) / 0.85 * 1500"
+                "900 + (MicVolume - 0.15) / 0.85 * 5000"
               ]
             },
             {
@@ -10506,17 +10510,6 @@
               "parameters": [
                 "Player",
                 "PlatformerObject"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "100"
               ]
             }
           ]
@@ -10680,6 +10673,33 @@
           ]
         },
         {
+          "aiGeneratedEventId": "01KSAKATTFF978JHJCD0QHY3T2",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "1000"
+              ]
+            }
+          ]
+        },
+        {
           "aiGeneratedEventId": "01KRRBP0NWW9FJAA44HKRYHACF",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -10699,7 +10719,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPVK4H2E9AJXB1MKMTT7Z0C",
+          "aiGeneratedEventId": "01KSAKAB8YDETSZQR1VY7DKC7Y",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10713,19 +10733,7 @@
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "1500"
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "aiGeneratedEventId": "01KRRCYNW9FQXSNVBVW7CA1AZV",
@@ -11321,7 +11329,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5877212072094569,
+        "zoomFactor": 0.9991260522560775,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -11335,8 +11343,8 @@
       "variables": [
         {
           "name": "EndingPlaying",
-          "type": "number",
-          "value": 0
+          "type": "boolean",
+          "value": false
         },
         {
           "name": "UFOSequenceStarted",
@@ -11395,6 +11403,11 @@
         },
         {
           "name": "CheckpointActivated",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "ReadyForAbduction",
           "type": "boolean",
           "value": false
         }
@@ -12000,23 +12013,6 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 135,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Checkpoint",
-          "persistentUuid": "7f06f288-fdd8-489b-bce5-8e0c60fa3acc",
-          "width": 139,
-          "x": 2,
-          "y": -3034,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
           "height": 192,
           "keepRatio": true,
           "layer": "",
@@ -12207,8 +12203,8 @@
           "name": "Alien_Cute",
           "persistentUuid": "cacf999a-8177-4438-9778-ed0f02db6807",
           "width": 201,
-          "x": 382,
-          "y": -4051,
+          "x": -40,
+          "y": -3038,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -12258,8 +12254,8 @@
           "name": "Star_Count",
           "persistentUuid": "ee4b97d0-802c-45b0-a9d5-02e0b8e0d42b",
           "width": 415,
-          "x": 237,
-          "y": 700,
+          "x": 246,
+          "y": 697,
           "zOrder": 64,
           "numberProperties": [],
           "stringProperties": [],
@@ -12269,15 +12265,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 100,
+          "height": 339,
           "keepRatio": true,
           "layer": "",
           "name": "UFO_Trigger",
           "opacity": 0,
           "persistentUuid": "1ddf59ed-a617-498e-b629-8cb9fb5be9a7",
-          "width": 300,
-          "x": 314,
-          "y": -4997,
+          "width": 107,
+          "x": 328,
+          "y": -4929,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -12293,9 +12289,76 @@
           "name": "UFO_Beam",
           "persistentUuid": "de515ba0-0a1d-42be-a7ec-63c47b295443",
           "width": 524,
-          "x": 140,
-          "y": -5121,
+          "x": 138,
+          "y": -5123,
           "zOrder": 65,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 56,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Yodel_Prompt",
+          "persistentUuid": "59337b2d-3049-4390-9772-f10dca9258ee",
+          "width": 629,
+          "x": 88,
+          "y": 492,
+          "zOrder": 66,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "MicInputDisplay",
+          "persistentUuid": "0961902f-f211-4c37-bc80-7a5b8614c392",
+          "width": 0,
+          "x": 342,
+          "y": 425,
+          "zOrder": 67,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 76,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Slilding_Bar_E",
+          "persistentUuid": "660a7f48-b2be-4e87-9d28-ef3e431b8652",
+          "width": 237,
+          "x": 1,
+          "y": 703,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 31,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Sliding_Bar_F",
+          "persistentUuid": "569e7a05-81fd-4d5a-89f0-55d223540949",
+          "width": 187,
+          "x": 10,
+          "y": 736,
+          "zOrder": 43,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -14611,67 +14674,6 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Checkpoint",
-          "persistentUuid": "c8145264-6230-4188-bc95-97cd31074edb",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "CP.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 26,
-                            "y": 71
-                          },
-                          {
-                            "x": 1012,
-                            "y": 71
-                          },
-                          {
-                            "x": 1012,
-                            "y": 1024
-                          },
-                          {
-                            "x": 26,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
           "name": "Dead_Tree_L",
           "persistentUuid": "01d9119e-4089-4edf-b84d-1964e3672569",
           "type": "Sprite",
@@ -15593,28 +15595,29 @@
           "bold": false,
           "italic": false,
           "name": "Yodel_Prompt",
+          "persistentUuid": "b876d577-c51d-4058-9979-46b37e231db2",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Text",
+          "string": "",
           "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
+          "textAlignment": "center",
+          "characterSize": 40,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 216,
+            "g": 108,
+            "r": 33
           },
           "content": {
             "bold": false,
-            "isOutlineEnabled": false,
+            "isOutlineEnabled": true,
             "isShadowEnabled": false,
             "italic": false,
             "outlineColor": "255;255;255",
-            "outlineThickness": 2,
+            "outlineThickness": 6,
             "shadowAngle": 90,
             "shadowBlurRadius": 2,
             "shadowColor": "0;0;0",
@@ -15622,13 +15625,13 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Text",
+            "text": "",
             "font": "",
-            "textAlignment": "left",
+            "textAlignment": "center",
             "verticalTextAlignment": "top",
-            "characterSize": 20,
+            "characterSize": 40,
             "lineHeight": 0,
-            "color": "0;0;0"
+            "color": "33;108;216"
           }
         },
         {
@@ -15687,6 +15690,128 @@
                           {
                             "x": 504,
                             "y": 895
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Slilding_Bar_E",
+          "persistentUuid": "72a196e7-1f41-43d1-9148-93fb3cfc6d54",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sliding_Bar_E.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 10
+                          },
+                          {
+                            "x": 804,
+                            "y": 10
+                          },
+                          {
+                            "x": 804,
+                            "y": 225
+                          },
+                          {
+                            "x": 7,
+                            "y": 225
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Sliding_Bar_F",
+          "persistentUuid": "8d568c18-3945-45f1-939b-e95772e40367",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sliding_Bar_F.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 5,
+                            "y": 5
+                          },
+                          {
+                            "x": 775,
+                            "y": 5
+                          },
+                          {
+                            "x": 775,
+                            "y": 98
+                          },
+                          {
+                            "x": 5,
+                            "y": 98
                           }
                         ]
                       ]
@@ -15771,9 +15896,6 @@
             "objectName": "Galaxy"
           },
           {
-            "objectName": "Checkpoint"
-          },
-          {
             "objectName": "Dead_Tree_L"
           },
           {
@@ -15793,6 +15915,12 @@
           },
           {
             "objectName": "Yodel_Prompt"
+          },
+          {
+            "objectName": "Slilding_Bar_E"
+          },
+          {
+            "objectName": "Sliding_Bar_F"
           }
         ]
       },
@@ -15865,6 +15993,32 @@
               },
               "parameters": [
                 "MicInputDisplay"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Slilding_Bar_E"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Sliding_Bar_F"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "UFO_1",
+                "=",
+                "-5015"
               ]
             }
           ]
@@ -15941,7 +16095,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KS9BQ635E8ZH14EDCZGYM8GG",
+          "aiGeneratedEventId": "01KSAKCB28PPBG2TD655ER8R8E",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -15949,6 +16103,26 @@
                 "value": "DepartScene"
               },
               "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "AtUFO",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "=",
                 ""
               ]
             }
@@ -16089,10 +16263,22 @@
                 "",
                 "0"
               ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "200"
+              ]
             }
           ]
         },
         {
+          "aiGeneratedEventId": "01KSASTMF2M135VCR9ZGRPV157",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16106,6 +16292,26 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "AtUFO",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -16116,59 +16322,9 @@
               "parameters": [
                 "Player",
                 "=",
-                "Variable(RespawnX)",
-                "=",
-                "Variable(RespawnY)"
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KS8VRYVYTYT8T7B0FR4EK56X",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player",
-                "Checkpoint",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
                 "RespawnX",
                 "=",
-                "Player.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "RespawnY",
-                "=",
-                "Player.Y()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "CheckpointActivated",
-                "True",
-                ""
+                "RespawnY"
               ]
             }
           ]
@@ -16183,9 +16339,19 @@
               },
               "parameters": [
                 "Player",
-                "UFO_1",
+                "UFO_Trigger",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "AtUFO",
+                "False",
                 ""
               ]
             }
@@ -16213,48 +16379,8 @@
                 "value": "Show"
               },
               "parameters": [
-                "Continue",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Continue_Text",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
                 "Star_Count",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Continue",
-                "Opacity",
-                "=",
-                "255"
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Continue_Text",
-                "Opacity",
-                "=",
-                "255"
               ]
             },
             {
@@ -16266,26 +16392,6 @@
                 "Opacity",
                 "=",
                 "255"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetZOrder"
-              },
-              "parameters": [
-                "Continue",
-                "=",
-                "999"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetZOrder"
-              },
-              "parameters": [
-                "Continue_Text",
-                "=",
-                "999"
               ]
             },
             {
@@ -16306,11 +16412,19 @@
                 "",
                 "\"RockSpawnTimer\""
               ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
             }
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPVJSK3GZ84SX9156T5R6CB",
+          "aiGeneratedEventId": "01KSAKBE1YNNEVKDRMD0TXF56N",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16342,7 +16456,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "400 + (MicVolume - 0.15) / 0.85 * 1500"
+                "400 + (MicVolume - 0.15) / 0.85 * 6000"
               ]
             },
             {
@@ -16353,22 +16467,11 @@
                 "Player",
                 "PlatformerObject"
               ]
-            },
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "100"
-              ]
             }
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPJQ0A15JSB30PT55Z4Y070",
+          "aiGeneratedEventId": "01KSASR6QR83BYEPFMYH738YRT",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16379,6 +16482,16 @@
                 "FallingRock",
                 ">",
                 "-4000"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
               ]
             }
           ],
@@ -16460,9 +16573,20 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KS8DVXH3Y90GPQCZ3XA6KYAR",
+          "aiGeneratedEventId": "01KSASRMSAPQ1R64Z31JS5GB5Q",
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -16480,7 +16604,18 @@
         {
           "aiGeneratedEventId": "01KRRBP0NWW9FJAA44HKRYHACF",
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -16497,7 +16632,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPVK4H2E9AJXB1MKMTT7Z0C",
+          "aiGeneratedEventId": "01KSAKC0T8MH6HTE6F0PFFHMFN",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16511,19 +16646,7 @@
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "2500"
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "aiGeneratedEventId": "01KRRCYNW9FQXSNVBVW7CA1AZV",
@@ -16830,6 +16953,16 @@
                 "False",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "AtUFO",
+                "False",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -16848,7 +16981,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KS8D1RKWAFH84BR3ER2X8E1F",
+          "aiGeneratedEventId": "01KSASS31234K0EBC1T24MNESM",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16865,7 +16998,28 @@
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Moving_Platform",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "AtUFO",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "EndingPlaying",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -16886,7 +17040,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KS8D1RKWAFH84BR3ER2X8E1F",
+          "aiGeneratedEventId": "01KSASSRT0FVHNCG4M539S79MF",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16897,6 +17051,16 @@
                 "Moving_Platform",
                 "Tween",
                 "\"MoveRight\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
               ]
             }
           ],
@@ -16928,7 +17092,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KS8D1RKWAFH84BR3ER2X8E1F",
+          "aiGeneratedEventId": "01KSAST61DGWKA0P49BEMZM7MJ",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16939,6 +17103,16 @@
                 "Moving_Platform",
                 "Tween",
                 "\"MoveLeft\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
               ]
             }
           ],
@@ -17009,26 +17183,6 @@
             },
             {
               "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Yodel_Prompt",
-                "Text",
-                "=",
-                "\"YODEL!\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Yodel_Prompt",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "Show"
               },
               "parameters": [
@@ -17038,12 +17192,22 @@
             },
             {
               "type": {
-                "value": "ActivateBehavior"
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "Player",
-                "PlatformerObject",
-                "no"
+                "Yodel_Prompt",
+                "Text",
+                "=",
+                "\"WHAT?! CANT HEAR YOU!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "Yodel_Prompt",
+                ""
               ]
             },
             {
@@ -17056,11 +17220,76 @@
                 "=",
                 "0"
               ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Moving_Platform",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::StopTween"
+                  },
+                  "parameters": [
+                    "Moving_Platform",
+                    "Tween",
+                    "\"MoveRight\"",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::StopTween"
+                  },
+                  "parameters": [
+                    "Moving_Platform",
+                    "Tween",
+                    "\"MoveLeft\"",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Moving_Platform",
+                    "Platform",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "FallingRock",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "FallingRock",
+                    ""
+                  ]
+                }
+              ]
             }
           ]
         },
         {
-          "aiGeneratedEventId": "01KSAEYTMRWER2TJXZDCSGKEBY",
+          "aiGeneratedEventId": "01KSATPVHCG17YSCHMGWMSD2PD",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -17075,23 +17304,12 @@
             },
             {
               "type": {
-                "value": "BuiltinCommonInstructions::CompareNumbers"
-              },
-              "parameters": [
-                "MicrophoneInput::Volume()",
-                ">",
-                "0.3"
-              ]
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "NumberVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
                 "EndingPlaying",
-                "=",
-                "0"
+                "False",
+                ""
               ]
             },
             {
@@ -17117,7 +17335,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "Yodel_Prompt"
+                "MicInputDisplay"
               ]
             },
             {
@@ -17125,82 +17343,125 @@
                 "value": "Hide"
               },
               "parameters": [
-                "MicInputDisplay"
+                "Yodel_Prompt"
               ]
             },
             {
               "type": {
-                "value": "ActivateBehavior"
+                "value": "Show"
+              },
+              "parameters": [
+                "UFO_Beam",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
               },
               "parameters": [
                 "Player",
                 "PlatformerObject",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-              },
-              "parameters": [
-                "Player",
-                "Tween",
-                "\"beam_up\"",
-                "UFO_1.Y()",
-                "\"easeInQuad\"",
-                "1.5",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KSAEZYNDN4WHJX2XKKG60VC3",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Tween::HasFinished"
-              },
-              "parameters": [
-                "UFO_1",
-                "Tween",
-                "\"ufo_takeoff\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "FadeTransition",
-                "Tween",
-                "\"FadeOut\"",
-                "255",
-                "\"linear\"",
-                "0.5",
-                "no"
+                "=",
+                "0"
               ]
             }
           ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "conditions": [],
+              "actions": [
                 {
                   "type": {
-                    "value": "Tween::HasFinished"
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Tween",
+                    "\"beam_up\"",
+                    "UFO_1.Y() - Player.Height()/2",
+                    "\"easeInQuad\"",
+                    "2.5",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "Player"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "UFO_Beam"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "UFO_1",
+                    "Tween",
+                    "\"ufo_takeoff\"",
+                    "-8000",
+                    "\"easeInQuad\"",
+                    "4",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                   },
                   "parameters": [
                     "FadeTransition",
                     "Tween",
-                    "\"FadeOut\""
+                    "\"FadeOut\"",
+                    "255",
+                    "\"linear\"",
+                    "0.5",
+                    "no"
                   ]
-                }
-              ],
-              "actions": [
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.5"
+                  ]
+                },
                 {
                   "type": {
                     "value": "Scene"
@@ -17211,123 +17472,6 @@
                     "no"
                   ]
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KSAB25SY3HB1R37G7GRF4SS2",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Tween::HasFinished"
-              },
-              "parameters": [
-                "Player",
-                "Tween",
-                "\"PlayerPickup\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Player"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "UFO_Beam"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "UFO_1",
-                "=",
-                "UFO_Beam.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "UFO_1",
-                "=",
-                "UFO_Beam.Y()"
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "UFO_1",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-              },
-              "parameters": [
-                "UFO_1",
-                "Tween",
-                "\"UFOTakeoff\"",
-                "UFO_1.Y() - 1000",
-                "\"linear\"",
-                "1",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KSAEZGH0C9H954F5N2KDC8GK",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Tween::HasFinished"
-              },
-              "parameters": [
-                "Player",
-                "Tween",
-                "\"beam_up\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Player"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-              },
-              "parameters": [
-                "UFO_1",
-                "Tween",
-                "\"ufo_takeoff\"",
-                "-500",
-                "\"easeInQuad\"",
-                "2",
-                "no"
               ]
             }
           ]
@@ -17413,7 +17557,7 @@
           "isLocked": true,
           "name": "UI",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
@@ -17819,6 +17963,14 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
