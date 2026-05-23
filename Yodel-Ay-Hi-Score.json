@@ -16,7 +16,7 @@
     "pixelsRounding": false,
     "projectUuid": "d8300f43-dc93-4822-b7f4-a333798c7914",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "noChanges",
+    "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "version": "1.0.0",
     "name": "Yodel-Ay-Hi-Score",
@@ -1344,6 +1344,17 @@
           "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/fd2231346dc06a1423ac30683259a1eba9084d0af04e263576dfae268ef6b213-foliagePack_036.png",
           "name": "cloud-project-resource"
         }
+      },
+      {
+        "file": "assets/NotoSansJP-Normal.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "ef0705d01ff43921ab5b3f6fd1c6fc09ed56de1bded05e0557e68715bda51094_NotoSansJP-Normal.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Open Font License/Japanese/ef0705d01ff43921ab5b3f6fd1c6fc09ed56de1bded05e0557e68715bda51094_NotoSansJP-Normal.ttf",
+          "name": "gdevelop-asset-store"
+        }
       }
     ]
   },
@@ -1459,7 +1470,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.21730996127271537,
+        "zoomFactor": 0.649203024951044,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1725,8 +1736,8 @@
           "name": "NEXT_LEVEL_BUTTON",
           "persistentUuid": "20a304a0-bf24-411c-824f-5e08d4d3bbbd",
           "width": 632,
-          "x": 79,
-          "y": 376,
+          "x": 87,
+          "y": 418,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -2617,8 +2628,8 @@
           "name": "Keep_Going",
           "persistentUuid": "77b1349c-c458-44cb-9164-0bbc2fe2df6c",
           "width": 748,
-          "x": 22,
-          "y": 167,
+          "x": 24,
+          "y": 189,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -2633,8 +2644,8 @@
           "name": "Flower_Count",
           "persistentUuid": "72f564ac-0662-4e06-b877-7c9c52a0bef4",
           "width": 0,
-          "x": 225,
-          "y": 659,
+          "x": 203,
+          "y": 722,
           "zOrder": 39,
           "numberProperties": [],
           "stringProperties": [],
@@ -5608,68 +5619,6 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Collect_Button",
-          "persistentUuid": "69c28d3b-bc53-4b1a-b735-ed78074f280f",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Button",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Button.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 27,
-                            "y": 53
-                          },
-                          {
-                            "x": 749,
-                            "y": 53
-                          },
-                          {
-                            "x": 749,
-                            "y": 211
-                          },
-                          {
-                            "x": 27,
-                            "y": 211
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "assetStoreId": "",
           "bold": false,
           "italic": false,
@@ -5817,9 +5766,6 @@
             "objectName": "Keep_Going"
           },
           {
-            "objectName": "Collect_Button"
-          },
-          {
             "objectName": "Flower_Count"
           }
         ]
@@ -5860,14 +5806,6 @@
               },
               "parameters": [
                 "NEXT_LEVEL_BUTTON"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Collect_Button"
               ]
             },
             {
@@ -6021,15 +5959,6 @@
             },
             {
               "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Collect_Button",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "OpacityCapability::OpacityBehavior::SetValue"
               },
               "parameters": [
@@ -6052,17 +5981,6 @@
             },
             {
               "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Collect_Button",
-                "Opacity",
-                "=",
-                "255"
-              ]
-            },
-            {
-              "type": {
                 "value": "SetZOrder"
               },
               "parameters": [
@@ -6077,16 +5995,6 @@
               },
               "parameters": [
                 "NEXT_LEVEL_BUTTON",
-                "=",
-                "999"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetZOrder"
-              },
-              "parameters": [
-                "Collect_Button",
                 "=",
                 "999"
               ]
@@ -6451,14 +6359,6 @@
             },
             {
               "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Collect_Button"
-              ]
-            },
-            {
-              "type": {
                 "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
               },
               "parameters": [
@@ -6485,7 +6385,7 @@
               },
               "parameters": [
                 "",
-                "\"LEVEL 3\"",
+                "\"LEVEL 2\"",
                 "no"
               ]
             }
@@ -6649,7 +6549,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6937238887524246,
+        "zoomFactor": 0.9991260522560631,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -6669,7 +6569,7 @@
         {
           "name": "TotalCollectibles",
           "type": "number",
-          "value": 3
+          "value": 5
         },
         {
           "name": "CollectiblesCollected",
@@ -7473,15 +7373,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 106,
           "keepRatio": true,
           "layer": "UI",
-          "name": "Continue",
-          "persistentUuid": "38f2c01d-c8d5-4ac6-943e-b890c228d3e3",
-          "width": 0,
-          "x": 7,
-          "y": 370,
+          "name": "Continue_Text",
+          "persistentUuid": "1c72696a-e1da-4eae-813e-092b1e896fce",
+          "width": 723,
+          "x": 84,
+          "y": 236,
           "zOrder": 57,
           "numberProperties": [],
           "stringProperties": [],
@@ -7491,31 +7392,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 68,
+          "height": 264,
           "keepRatio": true,
           "layer": "UI",
-          "name": "Almost_There",
-          "persistentUuid": "8d09b45b-4e7c-452b-82ca-7cd08cfa31d4",
-          "width": 696,
-          "x": 67,
-          "y": 227,
+          "name": "NEXT_LEVEL_BUTTON",
+          "persistentUuid": "86fc1c62-cc19-4166-ad11-75800e8d9624",
+          "width": 679,
+          "x": 56,
+          "y": 399,
           "zOrder": 58,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
-          "name": "Continue_Text",
-          "persistentUuid": "5de23b87-a629-45eb-9bf4-cd3d189e71cc",
-          "width": 0,
-          "x": 97,
-          "y": 440,
-          "zOrder": 59,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9826,10 +9711,54 @@
           }
         },
         {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Continue_Text",
+          "persistentUuid": "c6bfcecf-2878-4e53-965b-a6fa63f844f9",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "ALMOST THERE...",
+          "font": "ef0705d01ff43921ab5b3f6fd1c6fc09ed56de1bded05e0557e68715bda51094_NotoSansJP-Normal.ttf",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 235,
+            "g": 154,
+            "r": 27
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 8,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "ALMOST THERE...",
+            "font": "ef0705d01ff43921ab5b3f6fd1c6fc09ed56de1bded05e0557e68715bda51094_NotoSansJP-Normal.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "lineHeight": 0,
+            "color": "27;154;235"
+          }
+        },
+        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Continue",
-          "persistentUuid": "2707c5c2-3e95-4642-a1b8-9b4a0ebb3222",
+          "name": "NEXT_LEVEL_BUTTON",
+          "persistentUuid": "d4ca5f52-17f1-45e5-93dd-bd44ecb137bf",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -9846,7 +9775,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Button.png",
+                      "image": "Next_Level.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9862,20 +9791,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 27,
-                            "y": 53
+                            "x": 41,
+                            "y": 26
                           },
                           {
-                            "x": 749,
-                            "y": 53
+                            "x": 491,
+                            "y": 26
                           },
                           {
-                            "x": 749,
-                            "y": 211
+                            "x": 491,
+                            "y": 135
                           },
                           {
-                            "x": 27,
-                            "y": 211
+                            "x": 41,
+                            "y": 135
                           }
                         ]
                       ]
@@ -9885,94 +9814,6 @@
               ]
             }
           ]
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "Almost_There",
-          "persistentUuid": "ab2521c4-adbe-49fb-9b41-96f098fea666",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "ALMOST THERE..",
-          "font": "68aa9a6fa860ee71edbbdd8bb40fb357f4882570307bfb088af195f7fc8524f0_RampartOne-Regular.ttf",
-          "textAlignment": "left",
-          "characterSize": 80,
-          "color": {
-            "b": 78,
-            "g": 36,
-            "r": 6
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": true,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "ALMOST THERE..",
-            "font": "68aa9a6fa860ee71edbbdd8bb40fb357f4882570307bfb088af195f7fc8524f0_RampartOne-Regular.ttf",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 80,
-            "lineHeight": 0,
-            "color": "6;36;78"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "Continue_Text",
-          "persistentUuid": "c6bfcecf-2878-4e53-965b-a6fa63f844f9",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "TO THE TOP??",
-          "font": "68aa9a6fa860ee71edbbdd8bb40fb357f4882570307bfb088af195f7fc8524f0_RampartOne-Regular.ttf",
-          "textAlignment": "left",
-          "characterSize": 80,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": true,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "12;51;179",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "TO THE TOP??",
-            "font": "68aa9a6fa860ee71edbbdd8bb40fb357f4882570307bfb088af195f7fc8524f0_RampartOne-Regular.ttf",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 80,
-            "lineHeight": 0,
-            "color": "255;255;255"
-          }
         }
       ],
       "objectsFolderStructure": {
@@ -10042,13 +9883,10 @@
             "objectName": "Shroom"
           },
           {
-            "objectName": "Continue"
-          },
-          {
-            "objectName": "Almost_There"
-          },
-          {
             "objectName": "Continue_Text"
+          },
+          {
+            "objectName": "NEXT_LEVEL_BUTTON"
           }
         ]
       },
@@ -10079,15 +9917,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "Almost_There"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Continue"
+                "NEXT_LEVEL_BUTTON"
               ]
             },
             {
@@ -10220,7 +10050,7 @@
               },
               "parameters": [
                 "Player",
-                "Secret_Tunnel",
+                "Base_Camp_Fire",
                 "",
                 "",
                 ""
@@ -10257,16 +10087,7 @@
                 "value": "Show"
               },
               "parameters": [
-                "Almost_There",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Continue",
+                "NEXT_LEVEL_BUTTON",
                 ""
               ]
             },
@@ -10293,18 +10114,7 @@
                 "value": "OpacityCapability::OpacityBehavior::SetValue"
               },
               "parameters": [
-                "Almost_There",
-                "Opacity",
-                "=",
-                "255"
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Continue",
+                "NEXT_LEVEL_BUTTON",
                 "Opacity",
                 "=",
                 "255"
@@ -10337,17 +10147,7 @@
                 "value": "SetZOrder"
               },
               "parameters": [
-                "Almost_There",
-                "=",
-                "999"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetZOrder"
-              },
-              "parameters": [
-                "Continue",
+                "NEXT_LEVEL_BUTTON",
                 "=",
                 "999"
               ]
@@ -10505,7 +10305,7 @@
                 "",
                 "\"RockSpawnTimer\"",
                 ">",
-                "5"
+                "4"
               ]
             }
           ],
@@ -10853,7 +10653,7 @@
                 "value": "IsCursorOnObject"
               },
               "parameters": [
-                "Continue",
+                "NEXT_LEVEL_BUTTON",
                 "",
                 "yes",
                 ""
@@ -10886,23 +10686,15 @@
                 "value": "Hide"
               },
               "parameters": [
-                "Almost_There"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Continue"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
                 "Continue_Text"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "NEXT_LEVEL_BUTTON"
               ]
             },
             {
@@ -11230,8 +11022,8 @@
     {
       "b": 15,
       "disableInputWhenNotFocused": true,
-      "mangledName": "LEVEL3",
-      "name": "LEVEL3",
+      "mangledName": "LEVEL_323",
+      "name": "LEVEL 3",
       "r": 14,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -11249,7 +11041,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.31297760858833035,
+        "zoomFactor": 0.32353131685765274,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -14805,6 +14597,18 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NEXT_LEVEL_BUTTON",
+          "persistentUuid": "687bd917-c828-4522-94d0-484cc28ca235",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
         }
       ],
       "objectsFolderStructure": {
@@ -14889,6 +14693,9 @@
             "objectName": "Winner_Flag"
           },
           {
+            "objectName": "NEXT_LEVEL_BUTTON"
+          },
+          {
             "objectName": "Dead_Tree_L"
           },
           {
@@ -14923,15 +14730,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "Almost_There"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "Continue"
+                "NEXT_LEVEL_BUTTON"
               ]
             },
             {
@@ -15024,7 +14823,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KRPJQ0A15JSB30PT55Z4Y070",
+          "aiGeneratedEventId": "01KS9BQ635E8ZH14EDCZGYM8GG",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -15037,6 +14836,61 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "FadeTransition",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "Transitioning",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "FadeTransition",
+                "Tween",
+                "\"FadeIn\"",
+                "0",
+                "\"linear\"",
+                "0.5",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "Player",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Player",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
             {
               "type": {
                 "value": "ResetTimer"
@@ -15084,6 +14938,38 @@
                 "RespawnY",
                 "=",
                 "650"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "200"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "650"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "Player.Y() - 250",
+                "",
+                "0"
               ]
             }
           ]
@@ -15179,7 +15065,7 @@
               },
               "parameters": [
                 "Player",
-                "Secret_Tunnel",
+                "Winner_Flag",
                 "",
                 "",
                 ""
@@ -15411,7 +15297,7 @@
               "parameters": [
                 "FallingRock",
                 ">",
-                "-2900"
+                "-4000"
               ]
             }
           ],
@@ -15464,7 +15350,7 @@
                 "",
                 "\"RockSpawnTimer\"",
                 ">",
-                "5"
+                "3.5"
               ]
             }
           ],
@@ -15506,63 +15392,6 @@
                 "0",
                 "100 + ((650 - Player.Y()) * 0.12)",
                 "1"
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KS8VRYVYTYT8T7B0FR4EK56X",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "200"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "650"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetCameraY"
-              },
-              "parameters": [
-                "",
-                "=",
-                "Player.Y() - 250",
-                "",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Player",
-                ""
               ]
             }
           ]
@@ -15610,7 +15439,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "1500"
+                "2500"
               ]
             }
           ]
@@ -15901,16 +15730,6 @@
               },
               "parameters": [
                 "0.6"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"LEVEL 3\"",
-                "no"
               ]
             }
           ]
