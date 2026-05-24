@@ -1101,7 +1101,7 @@ gdjs.LEVEL_323Code.GDPlayerObjects1.length = k;
 if (isConditionTrue_0) {
 /* Reuse gdjs.LEVEL_323Code.GDPlayerObjects1 */
 {for(var i = 0, len = gdjs.LEVEL_323Code.GDPlayerObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_323Code.GDPlayerObjects1[i].setX(800);
+    gdjs.LEVEL_323Code.GDPlayerObjects1[i].setX(800 - (gdjs.LEVEL_323Code.GDPlayerObjects1[i].getWidth()));
 }
 }
 }
