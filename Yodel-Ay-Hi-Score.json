@@ -16,7 +16,7 @@
     "pixelsRounding": false,
     "projectUuid": "d8300f43-dc93-4822-b7f4-a333798c7914",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "noChanges",
     "templateSlug": "",
     "version": "1.0.0",
     "name": "Yodel-Ay-Hi-Score",
@@ -7782,6 +7782,14 @@
             },
             {
               "type": {
+                "value": "Visible"
+              },
+              "parameters": [
+                "NEXT_LEVEL_BUTTON"
+              ]
+            },
+            {
+              "type": {
                 "value": "BooleanVariable"
               },
               "parameters": [
@@ -12122,6 +12130,14 @@
                 "",
                 "yes",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Visible"
+              },
+              "parameters": [
+                "NEXT_LEVEL_BUTTON"
               ]
             },
             {
