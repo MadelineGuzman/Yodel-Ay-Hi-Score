@@ -7553,6 +7553,12 @@
                 "Player",
                 "PlatformerObject"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -11766,6 +11772,12 @@
                 "Player",
                 "PlatformerObject"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -17776,6 +17788,12 @@
                 "Player",
                 "PlatformerObject"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
