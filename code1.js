@@ -23,6 +23,8 @@ gdjs.copyArray(runtimeScene.getObjects("StartText"), gdjs.TitleScreenCode.GDStar
     gdjs.TitleScreenCode.GDStartTextObjects1[i].getBehavior("Tween").addObjectOpacityTween2("BlinkOut", 0, "linear", 1, false);
 }
 }
+{gdjs.evtTools.sound.playSound(runtimeScene, "Main_Amb_2.wav", true, 45, 1);
+}
 }
 
 }

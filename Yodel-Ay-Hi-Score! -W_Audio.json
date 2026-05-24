@@ -1336,26 +1336,6 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
-      },
-      {
-        "file": "Yodel_3.4.wav",
-        "kind": "audio",
-        "metadata": "",
-        "name": "Yodel_3.4.wav",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "file": "Yodel_2.2.wav",
-        "kind": "audio",
-        "metadata": "",
-        "name": "Yodel_2.2.wav",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
       }
     ]
   },
@@ -11975,7 +11955,7 @@
               },
               "parameters": [
                 "",
-                "Yodel_2.2.wav",
+                "Yodel_2.wav",
                 "",
                 "",
                 ""
@@ -18006,18 +17986,6 @@
           "actions": [
             {
               "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "Yodel_Fall.wav",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "SetXY"
               },
               "parameters": [
@@ -18432,7 +18400,7 @@
                     "\"beam_up\"",
                     "UFO_1.Y() - Player.Height()/2",
                     "\"easeInQuad\"",
-                    "2.5",
+                    "1.8",
                     "no"
                   ]
                 },
@@ -18442,19 +18410,7 @@
                   },
                   "parameters": [
                     "",
-                    "Yodel_Fall.wav",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "Yodel_3.4.wav",
+                    "Yodel_3.3.wav",
                     "",
                     "",
                     ""
