@@ -11,7 +11,7 @@
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
-    "orientation": "landscape",
+    "orientation": "default",
     "packageName": "com.example.gamename",
     "pixelsRounding": false,
     "projectUuid": "d8300f43-dc93-4822-b7f4-a333798c7914",
@@ -19,8 +19,8 @@
     "sizeOnStartupMode": "noChanges",
     "templateSlug": "",
     "version": "1.0.0",
-    "name": "Yodel-Ay-Hi-Score",
-    "description": "\"Yodel your way to the top of the mountain. Scream loud, float high, dodge rocks. Mic required.\"",
+    "name": "Yodel-Ay-Hi-Score!",
+    "description": "You are a yodeler. You are also not very good at it. The mountain stares.\nScream into your mic to jump. Sustain a note to float gracefully like the majestic alpine legend you absolutely are not. Go silent and fall like a disappointment. Rocks will fall on you. You will deserve it.\nReach the summit. Achieve glory. Disturb everyone within earshot.\n\n🎤 Microphone HIGLY RECOMMENDED. Headphones and dignity optional.\nMade with GDevelop. Powered entirely by your inability to carry a tune.\n\nHow to play:\n\n• Scream, yodel, or make any loud noise into your microphone to jump\n\n• Use arrow keys or on-screen controls to move left and right\n\n• Yodel your way to the summit using your microphone or use the spacebar if your neighbors are asleep.\n\n• Time it just right to get an extra BOOST UP!​\n\n• Collect flowers, mushrooms, and stars hidden across each level\n\n• Dodge falling rocks on your way up\n\n• Reach the top!\n\n• Playable by literally anyone who can make noise — toddlers included\n\n**Currently working on mobile controls\n\n\n\n🛠 Made with: GDevelop, Web Audio API, pixel art assets, and a lot of screaming.\n\n\n\nBest played with headphones off and volume up. Your neighbors will understand.\n\n\n\n🤖 A note on AI tools: AI was used in the development of this game, including AI-generated pixel art assets and coding assistance. All game design, level design, creative direction, and final implementation decisions were made by the developer.",
     "author": " Syzygy Entertainment",
     "windowWidth": 800,
     "windowHeight": 780,
@@ -77,10 +77,17 @@
       "placement": "bottom-left",
       "showWatermark": true
     },
-    "authorIds": [],
+    "authorIds": [
+      "1BDlN3xUyLfciGjm44rBlw4Yaft1"
+    ],
     "authorUsernames": [],
-    "categories": [],
-    "playableDevices": [],
+    "categories": [
+      "platformer",
+      "game-jam-9"
+    ],
+    "playableDevices": [
+      "keyboard"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -92,90 +99,6 @@
   "resources": {
     "resources": [
       {
-        "file": "assets/Onion Lad_Hurt.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Hurt.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/35d110991f962d9a71de271ba2403ecf31675fa04b6c63303496db5d760c9160_Onion Lad_Hurt.png",
-          "name": "Onion Lad_Hurt.png"
-        }
-      },
-      {
-        "file": "assets/Onion Lad_Idle_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Idle_1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/4a36aa19620179f64b2b6e1d3499a93288de61e25b3d429c2a536b8d7ea1f8bb_Onion Lad_Idle_1.png",
-          "name": "Onion Lad_Idle_1.png"
-        }
-      },
-      {
-        "file": "assets/Onion Lad_Idle_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Idle_2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/5d068153ce4524918b58be9fb1b1ce86e1ed6f2981a5d3cff5bda9b5bdc5202f_Onion Lad_Idle_2.png",
-          "name": "Onion Lad_Idle_2.png"
-        }
-      },
-      {
-        "file": "assets/Onion Lad_Jump.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Jump.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/936e9248e7f098663b473a6f282aec91d0e83853ee92877acd75bb5fdbc13234_Onion Lad_Jump.png",
-          "name": "Onion Lad_Jump.png"
-        }
-      },
-      {
-        "file": "assets/Onion Lad_Punching.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Punching.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/8b6e22c55c9f18684d46345e48c9984bcd0e369328451e69a414e1101f6e4011_Onion Lad_Punching.png",
-          "name": "Onion Lad_Punching.png"
-        }
-      },
-      {
-        "file": "assets/Onion Lad_Run_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Run_1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/1482c937e4c5c2324f03fcf273a8dd948e4941efa53600c3a894be1b912bec83_Onion Lad_Run_1.png",
-          "name": "Onion Lad_Run_1.png"
-        }
-      },
-      {
-        "file": "assets/Onion Lad_Run_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Onion Lad_Run_2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 2/Character/Onion Lad/83432cfca94f34b881afe7f383500ba9d209cf3e0264594447a5f571c071a089_Onion Lad_Run_2.png",
-          "name": "Onion Lad_Run_2.png"
-        }
-      },
-      {
         "file": "assets/tiled_Grass.png",
         "kind": "image",
         "metadata": "",
@@ -185,18 +108,6 @@
         "origin": {
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Breakable Physics/Background/f0fcdea023107dc7c4263d38d52d5f6f74a5b779887760a1580a613f7f4b2af0_tiled_Grass.png",
           "name": "tiled_Grass.png"
-        }
-      },
-      {
-        "file": "assets/Stone Platform.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Stone Platform.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/8d43fc0268490e243d8a113c159d6e3a32cd6be05019ae18d7987e28802bfb87_Stone Platform.png",
-          "name": "Stone Platform.png"
         }
       },
       {
@@ -212,18 +123,6 @@
         }
       },
       {
-        "file": "assets/Flag Green.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Flag Green.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Breakable Physics/Flag/ea4906ab823fb367aa336c7debec3311347740306acdae94d45e31b5a0564cd2_Flag Green.png",
-          "name": "Flag Green.png"
-        }
-      },
-      {
         "file": "assets/Rock.png",
         "kind": "image",
         "metadata": "",
@@ -233,30 +132,6 @@
         "origin": {
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Breakable Physics/Rock/4bc8e66b3a58b61792bd12e0f1ad8db48a609b585324764448b986eab5468a3a_Rock.png",
           "name": "Rock.png"
-        }
-      },
-      {
-        "file": "assets/Wall Brown Flat.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Wall Brown Flat.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Sokoban/Wall/b8c829149a2892e17fe974dff1370c505c7bef6ed09e1f2d2196187ef9ac3473_Wall Brown Flat.png",
-          "name": "Wall Brown Flat.png"
-        }
-      },
-      {
-        "file": "assets/Player_idle down.png.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_idle down.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Sokoban/Player/5d569e586628c927048fde5a05857f93fd72a96ad5e974508a78660594eaf03f_Player_idle down.png",
-          "name": "Player_idle down.png"
         }
       },
       {
@@ -631,18 +506,6 @@
         }
       },
       {
-        "file": "assets/UIpackSheet_transparent.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "UIpackSheet_transparent.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/d57f5adbb52f8076f653b3f211e1821de19a9b77321c01aa1cb298938bbc20d9-UIpackSheet_transparent.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/RampartOne-Regular.ttf",
         "kind": "font",
         "metadata": "",
@@ -651,18 +514,6 @@
         "origin": {
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Open Font License/Japanese/68aa9a6fa860ee71edbbdd8bb40fb357f4882570307bfb088af195f7fc8524f0_RampartOne-Regular.ttf",
           "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "file": "assets/UIpackSheet_magenta.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "UIpackSheet_magenta.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/0f4ac5389d1b384030fe40ddc461bd928e4b14ac4fbd4abbcc6ce98a578d5757-UIpackSheet_magenta.png",
-          "name": "cloud-project-resource"
         }
       },
       {
@@ -686,18 +537,6 @@
         "userAdded": false,
         "origin": {
           "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/4233a0b7a3899f6f16c88e3c7b882c1fc7bf88e2d05e7eaed91c6f3085e8e410-cloudy_sky-blue_01-1024x512_0.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/default_water_source_animated.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "default_water_source_animated.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/7ee1919e79b553af0242aad0e6b72d33659be109822d6515b8885a6b3c35d175-default_water_source_animated.png",
           "name": "cloud-project-resource"
         }
       },
@@ -750,18 +589,6 @@
         }
       },
       {
-        "file": "assets/Base_Camp.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Base_Camp.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/5e72ea420228f977505abe10c9017ba3fe69c572599ec137f78e475a28da52fa-Base_Camp.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/Camp_Fire.png",
         "kind": "image",
         "metadata": "",
@@ -772,14 +599,6 @@
           "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/9fc67b0fb715d7caf30dc407eb404b9f2e03f3a958efb86f887df234d03bb82c-Camp_Fire.png",
           "name": "cloud-project-resource"
         }
-      },
-      {
-        "file": "assets/idle down.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "idle down",
-        "smoothed": true,
-        "userAdded": false
       },
       {
         "file": "assets/idle down2.png",
@@ -846,18 +665,6 @@
         }
       },
       {
-        "file": "assets/foliagePack_027.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "foliagePack_027.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/5e90b211f5289f6a22026bfb3fd11383776918232880a8a035ffe5ade17bbae2-foliagePack_027.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/foliagePack_028.png",
         "kind": "image",
         "metadata": "",
@@ -906,30 +713,6 @@
         }
       },
       {
-        "file": "assets/foliagePack_032.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "foliagePack_032.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/59424a9e94c9f5ace130997c967b55d3c3e8615b7e4f91a5209c5e0968137330-foliagePack_032.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/foliagePack_033.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "foliagePack_033.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/9bcd426302f569802fd15de25a776a4e2260ac0c97e684313caa79b7db1d81af-foliagePack_033.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/foliagePack_034.png",
         "kind": "image",
         "metadata": "",
@@ -950,18 +733,6 @@
         "userAdded": false,
         "origin": {
           "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/c0526bf57b523e4ad69b3cb818f95489e5cfceb85aa318b8c88f19c9174751e4-foliagePack_057.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/foliagePack_059.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "foliagePack_059.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/4144ed05798de1a87eac1868145a256875d05a28e1cde5b48941ca1570486237-foliagePack_059.png",
           "name": "cloud-project-resource"
         }
       },
@@ -1038,50 +809,6 @@
         }
       },
       {
-        "file": "assets/default.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "default",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Snow_Tree.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Snow_Tree.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/1de21bbd12da57a4e647335c74382b2c57aa6c742a4f3ddec0148e5d7390bfff-Snow_Tree.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/Snow_Trees_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Snow_Trees_1.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/6d899cc28b65835942998c331e6db8fb6c915e3c72531d1395c410382cb467de-Snow_Trees_1.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/Snow_Trees_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Snow_Trees_2.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/7b19a3ac3064c3051385da09dce49acc2790ff690882ec7c1187cf6222f431fd-Snow_Trees_2.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/Snow_Trees_3.png",
         "kind": "image",
         "metadata": "",
@@ -1090,18 +817,6 @@
         "userAdded": false,
         "origin": {
           "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/3922fd040a8fb6b6d92221d4e3c5434cbd7b5f5a095fd342cd71ccb36f130c85-Snow_Trees_3.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/Snow_Trees_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Snow_Trees_4.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/244f0b8444bb8ac3aab1b47d6d70da2c3c1ba984d6a3d9df4b7219c677ad334f-Snow_Trees_4.png",
           "name": "cloud-project-resource"
         }
       },
@@ -1166,18 +881,6 @@
         }
       },
       {
-        "file": "assets/Camp_Fire_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Camp_Fire_2.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/52afdbb30042ed1c27cb823f98cbf8ce2d1f009fa04c073d851afcbc46f1624f-Camp_Fire_2.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/Flower_1.png",
         "kind": "image",
         "metadata": "",
@@ -1238,18 +941,6 @@
         }
       },
       {
-        "file": "assets/Shroom.png.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Shroom.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/c7d13ab162964e154057c48af3975ecaecd72733db8c7d41323d2d281102c5e4-Shroom.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/Shroom_Icy.png.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -1262,42 +953,6 @@
         }
       },
       {
-        "file": "assets/Almost_There.png.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Almost_There.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/33d0210e4d1cfa2be58e353b7f55cacc08b628262664e05573b9616736a9201a-Almost_There.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/To_The_Top.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "To_The_Top.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/f17bbf25cd898a2dc208c0abeaf705ae1ec451cbdaf9f482a5fdbf4581ff9a41-To_The_Top.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/Top_Button.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Top_Button.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/a94f2c4d5d01ded1b16cc07580ae34aec9aafce76f230e90652892689f477846-Top_Button.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
         "file": "assets/Galaxy.png",
         "kind": "image",
         "metadata": "",
@@ -1306,30 +961,6 @@
         "userAdded": false,
         "origin": {
           "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/12407a474111aec860a48d967a9ac5c48e0e6766ea5e7194749bd95daaab0782-Galaxy.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/CP.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "CP.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/216b44e683dbf329a914785b819bdabdbd17d11ca5cd578419ede37834939a93-CP.png",
-          "name": "cloud-project-resource"
-        }
-      },
-      {
-        "file": "assets/Flags.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Flags.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://project-resources.gdevelop.io/a86720a6-24a7-4739-9b18-8fcd831d03c0/resources/0c4ebc39b8fd6775a0c629474db73a65c013832171f9847392074c6eb52f87b4-Flags.png",
           "name": "cloud-project-resource"
         }
       },
@@ -1357,22 +988,6 @@
         }
       },
       {
-        "file": "Star.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Star.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Star.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Star",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "Alien_Cute.png",
         "kind": "image",
         "metadata": "",
@@ -1385,14 +1000,6 @@
         "kind": "image",
         "metadata": "",
         "name": "UFO2.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/UFO2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "UFO2",
         "smoothed": true,
         "userAdded": false
       },
@@ -1617,18 +1224,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/Start button.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Start button.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/On-Screen Controls/Sprites/Flat Dark/67518336539938a40e89dc0cd62158e4734abd706c9307a30244c879c4829225_Start button.png",
-          "name": "Start button.png"
-        }
-      },
-      {
         "file": "assets/Rectangle metal_Broken.png",
         "kind": "image",
         "metadata": "",
@@ -1665,18 +1260,6 @@
         }
       },
       {
-        "file": "assets/Blank button.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blank button.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/On-Screen Controls/Sprites/Line Light/3891c23121f365736680bde133a66088f79293d00758b650564777d3178895ef_Blank button.png",
-          "name": "Blank button.png"
-        }
-      },
-      {
         "file": "Syzygy_Game_Intro.png",
         "kind": "image",
         "metadata": "",
@@ -1703,6 +1286,56 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Fantasy UI Borders/Double Size/Transparent Panels/c3b9afdfb369faa538b6490159b237ae5d4c66a0ab789e78644535648238c5ba_panel-transparent-center-000.png",
           "name": "panel-transparent-center-000.png"
         }
+      },
+      {
+        "file": "Yodel.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Yodel.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Yodel_2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Yodel_2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Yodel_3.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Yodel_3.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Yodel_3.3.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Yodel_3.3.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Yodel_Fall.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Yodel_Fall.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -7570,7 +7203,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "1050"
+                "1200"
               ]
             },
             {
@@ -7894,10 +7527,22 @@
             },
             {
               "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Yodel.wav",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
-                "0.6"
+                "1.5"
               ]
             },
             {
@@ -12306,10 +11951,22 @@
             },
             {
               "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Yodel_2.wav",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
-                "0.6"
+                "1.8"
               ]
             },
             {
@@ -12339,6 +11996,18 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Yodel_Fall.wav",
+                "",
+                "",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "SetXY"
@@ -18731,8 +18400,20 @@
                     "\"beam_up\"",
                     "UFO_1.Y() - Player.Height()/2",
                     "\"easeInQuad\"",
-                    "2.5",
+                    "1.8",
                     "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Yodel_3.3.wav",
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
@@ -18740,7 +18421,7 @@
                     "value": "Wait"
                   },
                   "parameters": [
-                    "2.3"
+                    "1"
                   ]
                 },
                 {
