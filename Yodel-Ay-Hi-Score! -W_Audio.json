@@ -7276,7 +7276,7 @@
               "parameters": [
                 "Player",
                 "=",
-                "800"
+                "800 - Player.Width()"
               ]
             }
           ]
