@@ -2598,6 +2598,18 @@
           "name": "MicVolume",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "VoiceBoostTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "VoiceBoostVolume",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -6953,6 +6965,110 @@
           ]
         },
         {
+          "aiGeneratedEventId": "codex-voice-buffer-store-LEVEL 1",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "MicVolume",
+                ">",
+                "0.10"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                "=",
+                "0.15"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "=",
+                "MicVolume"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "codex-voice-buffer-floor-LEVEL 1",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "<",
+                "0.15"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "=",
+                "0.15"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "codex-voice-buffer-decay-LEVEL 1",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                "-",
+                "TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
           "aiGeneratedEventId": "01KRPFZWQEAEW2V7D8A6WA2ZXF",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -7127,9 +7243,9 @@
                 "value": "NumberVariable"
               },
               "parameters": [
-                "MicVolume",
+                "VoiceBoostTimer",
                 ">",
-                "0.15"
+                "0"
               ]
             },
             {
@@ -7151,7 +7267,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "900 + (MicVolume - 0.15) / 0.85 * 2500"
+                "900 + (VoiceBoostVolume - 0.15) / 0.85 * 2500"
               ]
             },
             {
@@ -7840,6 +7956,18 @@
           "name": "PlatformMove",
           "type": "number",
           "value": 1
+        },
+        {
+          "folded": true,
+          "name": "VoiceBoostTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "VoiceBoostVolume",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -11191,6 +11319,110 @@
           ]
         },
         {
+          "aiGeneratedEventId": "codex-voice-buffer-store-LEVEL 2",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "MicVolume",
+                ">",
+                "0.10"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                "=",
+                "0.15"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "=",
+                "MicVolume"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "codex-voice-buffer-floor-LEVEL 2",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "<",
+                "0.15"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "=",
+                "0.15"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "codex-voice-buffer-decay-LEVEL 2",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                "-",
+                "TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
           "aiGeneratedEventId": "01KRPFZWQEAEW2V7D8A6WA2ZXF",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -11427,9 +11659,9 @@
                 "value": "NumberVariable"
               },
               "parameters": [
-                "MicVolume",
+                "VoiceBoostTimer",
                 ">",
-                "0.15"
+                "0"
               ]
             },
             {
@@ -11451,7 +11683,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "900 + (MicVolume - 0.15) / 0.85 * 5000"
+                "900 + (VoiceBoostVolume - 0.15) / 0.85 * 5000"
               ]
             },
             {
@@ -12473,6 +12705,18 @@
           "name": "ReadyForAbduction",
           "type": "boolean",
           "value": false
+        },
+        {
+          "folded": true,
+          "name": "VoiceBoostTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "VoiceBoostVolume",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -17104,6 +17348,110 @@
           ]
         },
         {
+          "aiGeneratedEventId": "codex-voice-buffer-store-LEVEL 3",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "MicVolume",
+                ">",
+                "0.10"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                "=",
+                "0.15"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "=",
+                "MicVolume"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "codex-voice-buffer-floor-LEVEL 3",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "<",
+                "0.15"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostVolume",
+                "=",
+                "0.15"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "codex-voice-buffer-decay-LEVEL 3",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "VoiceBoostTimer",
+                "-",
+                "TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
           "aiGeneratedEventId": "01KRPFZWQEAEW2V7D8A6WA2ZXF",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -17495,9 +17843,9 @@
                 "value": "NumberVariable"
               },
               "parameters": [
-                "MicVolume",
+                "VoiceBoostTimer",
                 ">",
-                "0.15"
+                "0"
               ]
             },
             {
@@ -17519,7 +17867,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "400 + (MicVolume - 0.15) / 0.85 * 6000"
+                "400 + (VoiceBoostVolume - 0.15) / 0.85 * 6000"
               ]
             },
             {

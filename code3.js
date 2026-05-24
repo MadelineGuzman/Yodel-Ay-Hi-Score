@@ -275,6 +275,10 @@ if (isConditionTrue_0) {
 let isConditionTrue_0 = false;
 {
 {runtimeScene.getScene().getVariables().getFromIndex(7).setNumber(gdjs.evtsExt__MicrophoneInput__Volume.func(runtimeScene, null));
+if (runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber() > 0.10) {
+    runtimeScene._codexVoiceBoostUntil = Date.now() + 150;
+    runtimeScene._codexVoiceBoostVolume = Math.max(runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber(), 0.15);
+}
 }
 }
 
@@ -412,7 +416,7 @@ gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.LEVEL_322Code.GDPlayerObj
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = (runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber() > 0.15);
+{isConditionTrue_0 = (Date.now() < (runtimeScene._codexVoiceBoostUntil || 0));
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
@@ -428,7 +432,7 @@ gdjs.LEVEL_322Code.GDPlayerObjects1.length = k;
 if (isConditionTrue_0) {
 /* Reuse gdjs.LEVEL_322Code.GDPlayerObjects1 */
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setJumpSpeed(900 + (runtimeScene.getScene().getVariables().getFromIndex(7).getAsNumber() - 0.15) / 0.85 * 5000);
+    gdjs.LEVEL_322Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").setJumpSpeed(900 + ((runtimeScene._codexVoiceBoostVolume || 0.15) - 0.15) / 0.85 * 5000);
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDPlayerObjects1.length ;i < len;++i) {
