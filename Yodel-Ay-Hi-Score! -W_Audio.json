@@ -7563,6 +7563,75 @@
           "object": "MountainPlatform",
           "conditions": [],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Player.Y()",
+                ">",
+                "780"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Transitioning",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Yodel_Fall.wav",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "200",
+                "=",
+                "650"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "Player.Y() - 250",
+                "",
+                "0"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -11993,6 +12062,22 @@
                 ">",
                 "780"
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Transitioning",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -12018,6 +12103,18 @@
                 "200",
                 "=",
                 "650"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "Player.Y() - 250",
+                "",
+                "0"
               ]
             }
           ]
@@ -17949,7 +18046,6 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSAEY54DPE03BDY7RQVWGZDG",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -17981,9 +18077,27 @@
                 "False",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Yodel_Fall.wav",
+                "",
+                "",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "SetXY"
@@ -17991,9 +18105,21 @@
               "parameters": [
                 "Player",
                 "=",
-                "200",
+                "RespawnX",
                 "=",
-                "650"
+                "RespawnY"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "Player.Y() - 250",
+                "",
+                "0"
               ]
             }
           ]
