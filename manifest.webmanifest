@@ -1,6 +1,6 @@
 {
-  "name": "Yodel-Ay-Hi-Score! -W/Audio",
-  "short_name": "Yodel-Ay-Hi-Score! -W/Audio",
+  "name": "Yodel_Ay_Hi_Score_Main_Build",
+  "short_name": "Yodel_Ay_Hi_Score_Main_Build",
   "id": "com.example.gamename",
   "description": "You are a yodeler. You are also not very good at it. The mountain stares.\nScream into your mic to jump. Sustain a note to float gracefully like the majestic alpine legend you absolutely are not. Go silent and fall like a disappointment. Rocks will fall on you. You will deserve it.\nReach the summit. Achieve glory. Disturb everyone within earshot.\n\n🎤 Microphone HIGLY RECOMMENDED. Headphones and dignity optional.\nMade with GDevelop. Powered entirely by your inability to carry a tune.\n\nHow to play:\n\n• Scream, yodel, or make any loud noise into your microphone to jump\n\n• Use arrow keys or on-screen controls to move left and right\n\n• Yodel your way to the summit using your microphone or use the spacebar if your neighbors are asleep.\n\n• Time it just right to get an extra BOOST UP!​\n\n• Collect flowers, mushrooms, and stars hidden across each level\n\n• Dodge falling rocks on your way up\n\n• Reach the top!\n\n• Playable by literally anyone who can make noise — toddlers included\n\n**Currently working on mobile controls\n\n\n\n🛠 Made with: GDevelop, Web Audio API, pixel art assets, and a lot of screaming.\n\n\n\nBest played with headphones off and volume up. Your neighbors will understand.\n\n\n\n🤖 A note on AI tools: AI was used in the development of this game, including AI-generated pixel art assets and coding assistance. All game design, level design, creative direction, and final implementation decisions were made by the developer.",
   "orientation": "any",

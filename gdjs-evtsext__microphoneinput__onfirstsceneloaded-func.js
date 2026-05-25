@@ -9,7 +9,7 @@ gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded = {};
 gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded.userFunc0xa62b38 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded.userFunc0x9f0448 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 class MicrophoneInput {
   constructor(options = {}) {
@@ -130,7 +130,7 @@ gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded.eventsList0 = function(runtime
 {
 
 
-gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded.userFunc0xa62b38(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MicrophoneInput__onFirstSceneLoaded.userFunc0x9f0448(runtimeScene, eventsFunctionContext);
 
 }
 

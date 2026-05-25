@@ -84,7 +84,7 @@ $preserveNames = New-NameSet @(
     ".nojekyll",
     "README.md",
     "Yodel-Ay-Hi-Score.json",
-    "Yodel-Ay-Hi-Score.json.autosave",
+    "Yodel_Ay_Hi_Score_Main_Build.json",
     "assets",
     "publish-gdevelop-export.ps1"
 )
