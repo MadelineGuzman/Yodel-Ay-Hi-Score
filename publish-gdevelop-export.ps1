@@ -86,7 +86,6 @@ $preserveNames = New-NameSet @(
     "Yodel-Ay-Hi-Score.json",
     "Yodel_Ay_Hi_Score_Main_Build.json",
     "assets",
-    "mobile-controls.js",
     "publish-gdevelop-export.ps1"
 )
 
@@ -177,15 +176,6 @@ if ($index -notmatch $stylePattern) {
     throw "Could not find a <style> block in index.html to patch."
 }
 $index = [regex]::Replace($index, $stylePattern, $centeredStyle, 1)
-$mobileControlsScript = '<script src="mobile-controls.js" crossorigin="anonymous"></script>'
-$dataScript = '<script src="data.js" crossorigin="anonymous"></script>'
-if ($index -notmatch 'mobile-controls\.js') {
-    if (-not $index.Contains($dataScript)) {
-        throw "Could not find data.js script tag in index.html to inject mobile controls."
-    }
-    $index = $index.Replace($dataScript, "$mobileControlsScript`r`n`t$dataScript")
-    Write-Host "Injected mobile touch controls helper."
-}
 Set-Content -LiteralPath $indexPath -Value $index -NoNewline
 Write-Host "Reapplied centered canvas CSS."
 
@@ -210,52 +200,6 @@ $data = $data.Replace("\\Yodel_1", "").Replace("\Yodel_1", "")
 $data = $data.Replace('"sizeOnStartupMode":"adaptWidth"', '"sizeOnStartupMode":"noChanges"')
 Set-Content -LiteralPath $dataPath -Value $data -NoNewline
 Write-Host "Fixed sizeOnStartupMode for centered canvas."
-
-# Reapply mobile touch controls to generated scene code. GDevelop overwrites these
-# files on export, so this keeps half-screen movement and the visual arrows durable.
-$mobilePlayableScenes = @(
-    @{ Path = "code2.js"; FunctionName = "gdjs.LEVEL_321Code.func" },
-    @{ Path = "code3.js"; FunctionName = "gdjs.LEVEL_322Code.func" },
-    @{ Path = "code4.js"; FunctionName = "gdjs.LEVEL_323Code.func" }
-)
-foreach ($scene in $mobilePlayableScenes) {
-    $scenePath = Join-Path $workspace $scene.Path
-    if (Test-Path -LiteralPath $scenePath) {
-        $sceneCode = Get-Content -Raw -LiteralPath $scenePath
-        if ($sceneCode -notmatch 'YodelMobileControls\.update') {
-            $needle = "$($scene.FunctionName) = function(runtimeScene) {"
-            if (-not $sceneCode.Contains($needle)) {
-                throw "Could not find scene function in $($scene.Path) to patch mobile controls."
-            }
-            $replacement = "$needle`r`nif (globalThis.YodelMobileControls) {`r`n  globalThis.YodelMobileControls.update(runtimeScene);`r`n}"
-            $sceneCode = $sceneCode.Replace($needle, $replacement)
-            Set-Content -LiteralPath $scenePath -Value $sceneCode -NoNewline
-            Write-Host "Patched mobile touch controls into $($scene.Path)."
-        }
-    }
-}
-
-$mobileHiddenScenes = @(
-    @{ Path = "code0.js"; FunctionName = "gdjs.SplashScreenCode.func" },
-    @{ Path = "code1.js"; FunctionName = "gdjs.TitleScreenCode.func" },
-    @{ Path = "code5.js"; FunctionName = "gdjs.WinSceneCode.func" }
-)
-foreach ($scene in $mobileHiddenScenes) {
-    $scenePath = Join-Path $workspace $scene.Path
-    if (Test-Path -LiteralPath $scenePath) {
-        $sceneCode = Get-Content -Raw -LiteralPath $scenePath
-        if ($sceneCode -notmatch 'YodelMobileControls\.hide') {
-            $needle = "$($scene.FunctionName) = function(runtimeScene) {"
-            if (-not $sceneCode.Contains($needle)) {
-                throw "Could not find scene function in $($scene.Path) to patch mobile controls."
-            }
-            $replacement = "$needle`r`nif (globalThis.YodelMobileControls) {`r`n  globalThis.YodelMobileControls.hide();`r`n}"
-            $sceneCode = $sceneCode.Replace($needle, $replacement)
-            Set-Content -LiteralPath $scenePath -Value $sceneCode -NoNewline
-            Write-Host "Patched mobile touch controls hide into $($scene.Path)."
-        }
-    }
-}
 
 # GDevelop's cursor-on-object check can still hit hidden objects. On itch.io,
 # the click/touch used to start the iframe can carry into LEVEL 1 and trigger
@@ -307,8 +251,23 @@ if (isConditionTrue_0) {
 # Verify exported resources resolve from the Pages root.
 $missingExportResources = @()
 $resourceFiles = Get-ResourceFiles -DataJsPath $dataPath
+$soundReferenceNames = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
+Get-ChildItem -File -LiteralPath $workspace -Filter "code*.js" | ForEach-Object {
+    $sceneCode = Get-Content -Raw -LiteralPath $_.FullName
+    $soundMatches = [regex]::Matches($sceneCode, 'playSound(?:OnChannel)?\([^"]*"([^"]+\.(?:wav|mp3|ogg))"')
+    foreach ($match in $soundMatches) {
+        [void] $soundReferenceNames.Add([IO.Path]::GetFileName($match.Groups[1].Value))
+    }
+}
+$audioExtensions = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
+foreach ($extension in @(".mp3", ".wav", ".ogg")) {
+    [void] $audioExtensions.Add($extension)
+}
 foreach ($resource in $resourceFiles) {
-    if (-not (Test-Path -LiteralPath (Join-Path $workspace $resource))) {
+    $resourceName = [IO.Path]::GetFileName($resource)
+    $resourceExtension = [IO.Path]::GetExtension($resource)
+    $isUnusedStaleAudio = $audioExtensions.Contains($resourceExtension) -and -not $soundReferenceNames.Contains($resourceName)
+    if (-not $isUnusedStaleAudio -and -not (Test-Path -LiteralPath (Join-Path $workspace $resource))) {
         $missingExportResources += $resource
     }
 }

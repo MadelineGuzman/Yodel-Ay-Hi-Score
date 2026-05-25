@@ -1645,11 +1645,150 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Left_Arrow_Button",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "◀",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "◀",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Right_Arrow_Button",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "▶",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "▶",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Jump_Arrow_Button",
+      "persistentUuid": "365be01b-bbe9-4938-a9a0-abff2a0c85d4",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "▲",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "▲",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
+      {
+        "objectName": "Jump_Arrow_Button"
+      },
+      {
+        "objectName": "Right_Arrow_Button"
+      },
+      {
+        "objectName": "Left_Arrow_Button"
+      },
       {
         "objectName": "FadeTransition"
       }
@@ -2116,18 +2255,6 @@
       },
       "events": [
         {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "// CodexMobileControls: hide arrows outside playable levels.",
-            "if (globalThis.YodelMobileControls) {",
-            "  globalThis.YodelMobileControls.hide();",
-            "}"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
-        {
           "aiGeneratedEventId": "01KSB9NJEE9R7VMHFS6MEARZEB",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -2333,6 +2460,10 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         }
@@ -2526,18 +2657,6 @@
         ]
       },
       "events": [
-        {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "// CodexMobileControls: hide arrows outside playable levels.",
-            "if (globalThis.YodelMobileControls) {",
-            "  globalThis.YodelMobileControls.hide();",
-            "}"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
         {
           "aiGeneratedEventId": "01KSB8ZA1A2T1GKEF4KE0T2E31",
           "type": "BuiltinCommonInstructions::Standard",
@@ -3087,8 +3206,8 @@
           "name": "NEXT_LEVEL_BUTTON",
           "persistentUuid": "20a304a0-bf24-411c-824f-5e08d4d3bbbd",
           "width": 632,
-          "x": 87,
-          "y": 418,
+          "x": 72,
+          "y": 313,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -3979,8 +4098,8 @@
           "name": "Keep_Going",
           "persistentUuid": "77b1349c-c458-44cb-9164-0bbc2fe2df6c",
           "width": 748,
-          "x": 24,
-          "y": 189,
+          "x": 25,
+          "y": 78,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -4031,6 +4150,54 @@
           "x": 482,
           "y": 490,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Left_Arrow_Button",
+          "persistentUuid": "32020817-03d2-4235-bddc-290e681491ce",
+          "width": 0,
+          "x": 45,
+          "y": 675,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Jump_Arrow_Button",
+          "persistentUuid": "ac3fb37b-7bb0-43cb-8813-8eb85316e422",
+          "width": 0,
+          "x": 365,
+          "y": 669,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Right_Arrow_Button",
+          "persistentUuid": "d13d0bf8-ab9e-4106-b10a-1c68a1316cca",
+          "width": 0,
+          "x": 675,
+          "y": 675,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7123,18 +7290,6 @@
       },
       "events": [
         {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "// CodexMobileControls: durable half-screen mobile movement.",
-            "if (globalThis.YodelMobileControls) {",
-            "  globalThis.YodelMobileControls.update(runtimeScene);",
-            "}"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7174,7 +7329,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSAK90RZ4SGKFQXWSC4E60CM",
+          "aiGeneratedEventId": "01KSG0EE223KG21BZMR4H9ZZ5J",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7263,6 +7418,39 @@
                 "PlatformerObject",
                 "=",
                 "500"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "Opacity",
+                "=",
+                "120"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "Opacity",
+                "=",
+                "120"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "Opacity",
+                "=",
+                "120"
               ]
             }
           ]
@@ -8025,6 +8213,216 @@
               ]
             }
           ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0WKMXY3CGEBT16595E4VA",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CursorX"
+              },
+              "parameters": [
+                "",
+                "<",
+                "SceneWindowWidth() / 2",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Left\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0WKMXY3CGEBT16595E4VA",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CursorX"
+              },
+              "parameters": [
+                "",
+                ">",
+                "SceneWindowWidth() / 2",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Right\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0WKMXY3CGEBT16595E4VA",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Jump\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG15ZYSY817A7GG8HY6YENN",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -8177,7 +8575,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4979159907912646,
+        "zoomFactor": 1.0328169125299038,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -8593,8 +8991,8 @@
           "name": "Shroom_Count",
           "persistentUuid": "72f564ac-0662-4e06-b877-7c9c52a0bef4",
           "width": 0,
-          "x": 173,
-          "y": 701,
+          "x": 179,
+          "y": 705,
           "zOrder": 56,
           "numberProperties": [],
           "stringProperties": [],
@@ -9029,6 +9427,54 @@
           "x": 56,
           "y": 399,
           "zOrder": 58,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Left_Arrow_Button",
+          "persistentUuid": "3deac301-ad64-4a7a-8300-3178defd68f5",
+          "width": 0,
+          "x": 45,
+          "y": 675,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Jump_Arrow_Button",
+          "persistentUuid": "116a676a-d94c-4e66-8ea6-ad1b20ef223b",
+          "width": 0,
+          "x": 365,
+          "y": 675,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Right_Arrow_Button",
+          "persistentUuid": "5aa9ff8d-e90f-467a-b26c-163d951ed3d9",
+          "width": 0,
+          "x": 675,
+          "y": 675,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11520,18 +11966,6 @@
       },
       "events": [
         {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "// CodexMobileControls: durable half-screen mobile movement.",
-            "if (globalThis.YodelMobileControls) {",
-            "  globalThis.YodelMobileControls.update(runtimeScene);",
-            "}"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
-        {
           "aiGeneratedEventId": "01KS6702ZMHAXSDV0BXZS73J1X",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -12771,6 +13205,210 @@
               ]
             }
           ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG168MVFSAJ2BXY1XPXXMJM",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0XT002A8K0AC98JVPSG31",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CursorX"
+              },
+              "parameters": [
+                "",
+                "<",
+                "SceneWindowWidth() / 2",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Left\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0XT002A8K0AC98JVPSG31",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CursorX"
+              },
+              "parameters": [
+                "",
+                ">",
+                "SceneWindowWidth() / 2",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Right\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0XT002A8K0AC98JVPSG31",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Jump\""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -12785,7 +13423,7 @@
           "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "isLocked": false,
+          "isLocked": true,
           "name": "",
           "renderingType": "",
           "visibility": true,
@@ -12923,7 +13561,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9991260522560775,
+        "zoomFactor": 1.2190980283517125,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -13848,8 +14486,8 @@
           "name": "Star_Count",
           "persistentUuid": "ee4b97d0-802c-45b0-a9d5-02e0b8e0d42b",
           "width": 415,
-          "x": 246,
-          "y": 697,
+          "x": 225,
+          "y": 702,
           "zOrder": 64,
           "numberProperties": [],
           "stringProperties": [],
@@ -13919,6 +14557,54 @@
           "x": 342,
           "y": 425,
           "zOrder": 67,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Left_Arrow_Button",
+          "persistentUuid": "da5baeb1-3aa1-4825-b145-5e9d2d46cde2",
+          "width": 0,
+          "x": 45,
+          "y": 675,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Jump_Arrow_Button",
+          "persistentUuid": "ae4b0d24-1ef7-4ca8-9852-857d3013e450",
+          "width": 0,
+          "x": 365,
+          "y": 675,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Right_Arrow_Button",
+          "persistentUuid": "ca1427d1-b07e-4fb4-82e2-d77316dc2034",
+          "width": 0,
+          "x": 675,
+          "y": 675,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -17486,18 +18172,6 @@
       },
       "events": [
         {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "// CodexMobileControls: durable half-screen mobile movement.",
-            "if (globalThis.YodelMobileControls) {",
-            "  globalThis.YodelMobileControls.update(runtimeScene);",
-            "}"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
-        {
           "aiGeneratedEventId": "01KSAAWAFH4S5VVHG7WHKSVXE2",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -17591,6 +18265,55 @@
                 "UFO_1",
                 "=",
                 "-5015"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG16J1GP8K7CV6D64AJG17M",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "Opacity",
+                "=",
+                "150"
               ]
             }
           ]
@@ -19274,6 +19997,161 @@
               ]
             }
           ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0Z6QQNG3DZ2Y3VX5TTT0R",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Jump\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0Z6QQNG3DZ2Y3VX5TTT0R",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CursorX"
+              },
+              "parameters": [
+                "",
+                ">",
+                "800 / 2",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Right\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSG0Z6QQNG3DZ2Y3VX5TTT0R",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CursorX"
+              },
+              "parameters": [
+                "",
+                "<",
+                "800 / 2",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Left\""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -19800,18 +20678,6 @@
         ]
       },
       "events": [
-        {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "// CodexMobileControls: hide arrows outside playable levels.",
-            "if (globalThis.YodelMobileControls) {",
-            "  globalThis.YodelMobileControls.hide();",
-            "}"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [

@@ -7,9 +7,16 @@ gdjs.TitleScreenCode.GDStartTextObjects1= [];
 gdjs.TitleScreenCode.GDStartTextObjects2= [];
 gdjs.TitleScreenCode.GDFadeTransitionObjects1= [];
 gdjs.TitleScreenCode.GDFadeTransitionObjects2= [];
+gdjs.TitleScreenCode.GDLeft_9595Arrow_9595ButtonObjects1= [];
+gdjs.TitleScreenCode.GDLeft_9595Arrow_9595ButtonObjects2= [];
+gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects1= [];
+gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects2= [];
+gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects1= [];
+gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 
 
 gdjs.TitleScreenCode.eventsList0 = function(runtimeScene) {
+
 
 {
 
@@ -119,9 +126,6 @@ if (isConditionTrue_0) {
 };
 
 gdjs.TitleScreenCode.func = function(runtimeScene) {
-if (globalThis.YodelMobileControls) {
-  globalThis.YodelMobileControls.hide();
-}
 runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.TitleScreenCode.GDTitleImageObjects1.length = 0;
@@ -130,6 +134,12 @@ gdjs.TitleScreenCode.GDStartTextObjects1.length = 0;
 gdjs.TitleScreenCode.GDStartTextObjects2.length = 0;
 gdjs.TitleScreenCode.GDFadeTransitionObjects1.length = 0;
 gdjs.TitleScreenCode.GDFadeTransitionObjects2.length = 0;
+gdjs.TitleScreenCode.GDLeft_9595Arrow_9595ButtonObjects1.length = 0;
+gdjs.TitleScreenCode.GDLeft_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
+gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
+gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
 
 gdjs.TitleScreenCode.eventsList0(runtimeScene);
 gdjs.TitleScreenCode.GDTitleImageObjects1.length = 0;
@@ -138,6 +148,12 @@ gdjs.TitleScreenCode.GDStartTextObjects1.length = 0;
 gdjs.TitleScreenCode.GDStartTextObjects2.length = 0;
 gdjs.TitleScreenCode.GDFadeTransitionObjects1.length = 0;
 gdjs.TitleScreenCode.GDFadeTransitionObjects2.length = 0;
+gdjs.TitleScreenCode.GDLeft_9595Arrow_9595ButtonObjects1.length = 0;
+gdjs.TitleScreenCode.GDLeft_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
+gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
+gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
 
 
 return;
