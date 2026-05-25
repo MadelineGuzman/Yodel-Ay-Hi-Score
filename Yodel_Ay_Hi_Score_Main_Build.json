@@ -7686,7 +7686,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "codex-space-jump-LEVEL-1",
+          "aiGeneratedEventId": "01KSG32WVPV8KMB88MPG39EKZ7",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8317,7 +8317,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSG0WKMXY3CGEBT16595E4VA",
+          "aiGeneratedEventId": "01KSG33QNTTFJ12434WNX4WQZG",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8359,12 +8359,22 @@
           "actions": [
             {
               "type": {
-                "value": "PlatformBehavior::SimulateControl"
+                "value": "PlatformBehavior::JumpSpeed"
               },
               "parameters": [
                 "Player",
                 "PlatformerObject",
-                "\"Jump\""
+                "=",
+                "1200"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
               ]
             }
           ]
@@ -12329,7 +12339,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "codex-space-jump-LEVEL-2",
+          "aiGeneratedEventId": "01KSG3332Z2ZZ79455RVYX11T7",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -13358,7 +13368,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSG0XT002A8K0AC98JVPSG31",
+          "aiGeneratedEventId": "01KSG3418T28H4GEA0QPB3XDH0",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -13400,12 +13410,22 @@
           "actions": [
             {
               "type": {
-                "value": "PlatformBehavior::SimulateControl"
+                "value": "PlatformBehavior::JumpSpeed"
               },
               "parameters": [
                 "Player",
                 "PlatformerObject",
-                "\"Jump\""
+                "=",
+                "1650"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
               ]
             }
           ]
@@ -18790,7 +18810,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "codex-space-jump-LEVEL-3",
+          "aiGeneratedEventId": "01KSG33AFQ0XVVQG9177V0VRTN",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -19999,7 +20019,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSG0Z6QQNG3DZ2Y3VX5TTT0R",
+          "aiGeneratedEventId": "01KSG348H9P6S79PP00M8XTQVB",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -20041,12 +20061,22 @@
           "actions": [
             {
               "type": {
-                "value": "PlatformBehavior::SimulateControl"
+                "value": "PlatformBehavior::JumpSpeed"
               },
               "parameters": [
                 "Player",
                 "PlatformerObject",
-                "\"Jump\""
+                "=",
+                "1650"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
               ]
             }
           ]

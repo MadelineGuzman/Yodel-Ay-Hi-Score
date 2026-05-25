@@ -9,7 +9,7 @@ gdjs.evtsExt__MicrophoneInput__Volume = {};
 gdjs.evtsExt__MicrophoneInput__Volume.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__MicrophoneInput__Volume.userFunc0xb3cda0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MicrophoneInput__Volume.userFunc0xa313d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const microphoneInput = gdjs.__microphoneInputExtension
   ? gdjs.__microphoneInputExtension.getInput()
@@ -22,7 +22,7 @@ gdjs.evtsExt__MicrophoneInput__Volume.eventsList0 = function(runtimeScene, event
 {
 
 
-gdjs.evtsExt__MicrophoneInput__Volume.userFunc0xb3cda0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MicrophoneInput__Volume.userFunc0xa313d8(runtimeScene, eventsFunctionContext);
 
 }
 

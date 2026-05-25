@@ -17,7 +17,6 @@ gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 
 gdjs.TitleScreenCode.eventsList0 = function(runtimeScene) {
 
-
 {
 
 

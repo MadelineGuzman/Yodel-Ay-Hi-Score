@@ -21,7 +21,7 @@ gdjs.WinSceneCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.WinSceneCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 
 
-gdjs.WinSceneCode.userFunc0xe59610 = function GDJSInlineCode(runtimeScene) {
+gdjs.WinSceneCode.userFunc0x971ab0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // CodexTotalCollectibles display
 const total = runtimeScene.getGame().getVariables().get('TotalScoreCollectibles').getAsNumber();
@@ -34,19 +34,19 @@ gdjs.WinSceneCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.WinSceneCode.userFunc0xe59610(runtimeScene);
+gdjs.WinSceneCode.userFunc0x971ab0(runtimeScene);
 
 }
 
 
 };gdjs.WinSceneCode.mapOfGDgdjs_9546WinSceneCode_9546GDPlay_95959595Again_95959595ButtonObjects1Objects = Hashtable.newFrom({"Play_Again_Button": gdjs.WinSceneCode.GDPlay_9595Again_9595ButtonObjects1});
-gdjs.WinSceneCode.asyncCallback13527372 = function (runtimeScene, asyncObjectsList) {
+gdjs.WinSceneCode.asyncCallback13667388 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.WinSceneCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "LEVEL 1", false);
 }
 gdjs.WinSceneCode.localVariables.length = 0;
 }
-gdjs.WinSceneCode.idToCallbackMap.set(13527372, gdjs.WinSceneCode.asyncCallback13527372);
+gdjs.WinSceneCode.idToCallbackMap.set(13667388, gdjs.WinSceneCode.asyncCallback13667388);
 gdjs.WinSceneCode.eventsList1 = function(runtimeScene) {
 
 {
@@ -56,7 +56,7 @@ gdjs.WinSceneCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.WinSceneCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.WinSceneCode.asyncCallback13527372(runtimeScene, asyncObjectsList)), 13527372, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.WinSceneCode.asyncCallback13667388(runtimeScene, asyncObjectsList)), 13667388, asyncObjectsList);
 }
 }
 
@@ -64,7 +64,6 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5)
 
 
 };gdjs.WinSceneCode.eventsList2 = function(runtimeScene) {
-
 
 {
 

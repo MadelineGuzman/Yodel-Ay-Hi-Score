@@ -25,7 +25,6 @@ gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 
 gdjs.SplashScreenCode.eventsList0 = function(runtimeScene) {
 
-
 {
 
 
