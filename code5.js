@@ -97,6 +97,9 @@ gdjs.WinSceneCode.eventsList1(runtimeScene);} //End of subevents
 };
 
 gdjs.WinSceneCode.func = function(runtimeScene) {
+if (globalThis.YodelMobileControls) {
+  globalThis.YodelMobileControls.hide();
+}
 runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.WinSceneCode.GDCongratulationsTextObjects1.length = 0;

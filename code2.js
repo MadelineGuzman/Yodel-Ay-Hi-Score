@@ -688,6 +688,9 @@ if (isConditionTrue_0) {
 };
 
 gdjs.LEVEL_321Code.func = function(runtimeScene) {
+if (globalThis.YodelMobileControls) {
+  globalThis.YodelMobileControls.update(runtimeScene);
+}
 runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.LEVEL_321Code.GDGroundObjects1.length = 0;

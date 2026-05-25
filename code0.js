@@ -76,6 +76,9 @@ if (isConditionTrue_0) {
 };
 
 gdjs.SplashScreenCode.func = function(runtimeScene) {
+if (globalThis.YodelMobileControls) {
+  globalThis.YodelMobileControls.hide();
+}
 runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.SplashScreenCode.GDSplashImageObjects1.length = 0;

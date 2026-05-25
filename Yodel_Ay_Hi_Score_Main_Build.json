@@ -2116,6 +2116,18 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// CodexMobileControls: hide arrows outside playable levels.",
+            "if (globalThis.YodelMobileControls) {",
+            "  globalThis.YodelMobileControls.hide();",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
           "aiGeneratedEventId": "01KSB9NJEE9R7VMHFS6MEARZEB",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -2514,6 +2526,18 @@
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// CodexMobileControls: hide arrows outside playable levels.",
+            "if (globalThis.YodelMobileControls) {",
+            "  globalThis.YodelMobileControls.hide();",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
         {
           "aiGeneratedEventId": "01KSB8ZA1A2T1GKEF4KE0T2E31",
           "type": "BuiltinCommonInstructions::Standard",
@@ -7099,6 +7123,18 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// CodexMobileControls: durable half-screen mobile movement.",
+            "if (globalThis.YodelMobileControls) {",
+            "  globalThis.YodelMobileControls.update(runtimeScene);",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -11483,6 +11519,18 @@
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// CodexMobileControls: durable half-screen mobile movement.",
+            "if (globalThis.YodelMobileControls) {",
+            "  globalThis.YodelMobileControls.update(runtimeScene);",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
         {
           "aiGeneratedEventId": "01KS6702ZMHAXSDV0BXZS73J1X",
           "type": "BuiltinCommonInstructions::Standard",
@@ -17438,6 +17486,18 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// CodexMobileControls: durable half-screen mobile movement.",
+            "if (globalThis.YodelMobileControls) {",
+            "  globalThis.YodelMobileControls.update(runtimeScene);",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
           "aiGeneratedEventId": "01KSAAWAFH4S5VVHG7WHKSVXE2",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -19740,6 +19800,18 @@
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// CodexMobileControls: hide arrows outside playable levels.",
+            "if (globalThis.YodelMobileControls) {",
+            "  globalThis.YodelMobileControls.hide();",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
