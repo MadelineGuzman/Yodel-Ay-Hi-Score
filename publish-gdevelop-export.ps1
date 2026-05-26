@@ -169,6 +169,55 @@ $centeredStyle = @'
 		canvas {
 			display: block;
 		}
+
+		#yodel-mobile-controls {
+			display: none;
+		}
+
+		@media (pointer: coarse), (max-width: 900px) {
+			#yodel-mobile-controls {
+				display: block;
+				inset: 0;
+				pointer-events: none;
+				position: fixed;
+				z-index: 10000;
+			}
+
+			.yodel-mobile-control {
+				align-items: center;
+				background: rgba(8, 18, 28, 0.38);
+				border: 2px solid rgba(255, 255, 255, 0.45);
+				border-radius: 50%;
+				box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+				color: rgba(255, 255, 255, 0.82);
+				display: flex;
+				font: 700 34px/1 system-ui, sans-serif;
+				height: 68px;
+				justify-content: center;
+				pointer-events: auto;
+				position: fixed;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.55);
+				touch-action: none;
+				user-select: none;
+				width: 68px;
+			}
+
+			#yodel-left-control {
+				bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+				left: 22px;
+			}
+
+			#yodel-right-control {
+				bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+				left: 106px;
+			}
+
+			#yodel-jump-control {
+				bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
 	</style>
 '@
 
@@ -200,6 +249,125 @@ $data = $data.Replace("\\Yodel_1", "").Replace("\Yodel_1", "")
 $data = $data.Replace('"sizeOnStartupMode":"adaptWidth"', '"sizeOnStartupMode":"noChanges"')
 Set-Content -LiteralPath $dataPath -Value $data -NoNewline
 Write-Host "Fixed sizeOnStartupMode for centered canvas."
+
+# Keep mobile builds from switching to adaptWidth at runtime. It zooms/crops this
+# 800x780 game on tall phone screens, so mobile controls are handled by a DOM
+# overlay outside the canvas instead.
+Get-ChildItem -File -LiteralPath $workspace -Filter "code*.js" | ForEach-Object {
+    $sceneCode = Get-Content -Raw -LiteralPath $_.FullName
+    $originalSceneCode = $sceneCode
+    $sceneCode = $sceneCode.Replace('gdjs.evtTools.window.setGameResolutionResizeMode(runtimeScene, "adaptWidth");', 'gdjs.evtTools.window.setGameResolutionResizeMode(runtimeScene, "");')
+    $sceneCode = $sceneCode.Replace('gdjs.evtTools.window.setAdaptGameResolutionAtRuntime(runtimeScene, true);', 'gdjs.evtTools.window.setAdaptGameResolutionAtRuntime(runtimeScene, false);')
+    foreach ($arrowObject in @("GDLeft_9595Arrow_9595ButtonObjects", "GDRight_9595Arrow_9595ButtonObjects", "GDJump_9595Arrow_9595ButtonObjects")) {
+        $sceneCode = [regex]::Replace(
+            $sceneCode,
+            "($([regex]::Escape($arrowObject))\d+\[i\]\.getBehavior\(""Opacity""\)\.setOpacity\()\d+(\);)",
+            '${1}0${2}'
+        )
+    }
+    if ($sceneCode -ne $originalSceneCode) {
+        Set-Content -LiteralPath $_.FullName -Value $sceneCode -NoNewline
+    }
+}
+Write-Host "Patched mobile resize and hidden canvas arrow visuals."
+
+# Add mobile-only controls outside the GDevelop canvas, so they can sit in the
+# letterbox/black area without changing the game layout or desktop behavior.
+$index = Get-Content -Raw -LiteralPath $indexPath
+$mobileControlsMarkup = @'
+	<div id="yodel-mobile-controls" aria-hidden="true">
+		<button class="yodel-mobile-control" id="yodel-left-control" type="button" aria-label="Move left">◀</button>
+		<button class="yodel-mobile-control" id="yodel-right-control" type="button" aria-label="Move right">▶</button>
+		<button class="yodel-mobile-control" id="yodel-jump-control" type="button" aria-label="Jump">▲</button>
+	</div>
+
+	<script>
+	(function() {
+		const controls = document.getElementById('yodel-mobile-controls');
+		if (!controls) return;
+
+		const keyState = new Map();
+		const keyInfo = {
+			Left: { key: 'ArrowLeft', code: 'ArrowLeft', keyCode: 37 },
+			Right: { key: 'ArrowRight', code: 'ArrowRight', keyCode: 39 },
+			Space: { key: ' ', code: 'Space', keyCode: 32 }
+		};
+
+		function makeKeyEvent(name, type) {
+			const info = keyInfo[name];
+			return new KeyboardEvent(type, {
+				key: info.key,
+				code: info.code,
+				keyCode: info.keyCode,
+				which: info.keyCode,
+				bubbles: true,
+				cancelable: true
+			});
+		}
+
+		function emitKey(name, type) {
+			document.dispatchEvent(makeKeyEvent(name, type));
+			window.dispatchEvent(makeKeyEvent(name, type));
+		}
+
+		function press(name) {
+			if (keyState.get(name)) return;
+			keyState.set(name, true);
+			emitKey(name, 'keydown');
+		}
+
+		function release(name) {
+			if (!keyState.get(name)) return;
+			keyState.set(name, false);
+			emitKey(name, 'keyup');
+		}
+
+		function bindHold(id, name) {
+			const button = document.getElementById(id);
+			if (!button) return;
+			const start = (event) => {
+				event.preventDefault();
+				press(name);
+			};
+			const end = (event) => {
+				event.preventDefault();
+				release(name);
+			};
+			button.addEventListener('pointerdown', start);
+			button.addEventListener('pointerup', end);
+			button.addEventListener('pointercancel', end);
+			button.addEventListener('pointerleave', end);
+			button.addEventListener('contextmenu', (event) => event.preventDefault());
+		}
+
+		function bindTap(id, name) {
+			const button = document.getElementById(id);
+			if (!button) return;
+			button.addEventListener('pointerdown', (event) => {
+				event.preventDefault();
+				press(name);
+				window.setTimeout(() => release(name), 90);
+			});
+			button.addEventListener('contextmenu', (event) => event.preventDefault());
+		}
+
+		bindHold('yodel-left-control', 'Left');
+		bindHold('yodel-right-control', 'Right');
+		bindTap('yodel-jump-control', 'Space');
+		window.addEventListener('blur', () => {
+			release('Left');
+			release('Right');
+			release('Space');
+		});
+	})();
+	</script>
+'@
+if ($index -notmatch 'id="yodel-mobile-controls"') {
+    $index = $index.Replace("<body>`r`n", "<body>`r`n`r`n$mobileControlsMarkup`r`n")
+    $index = $index.Replace("<body>`n", "<body>`n`n$mobileControlsMarkup`n")
+    Set-Content -LiteralPath $indexPath -Value $index -NoNewline
+    Write-Host "Injected mobile DOM controls."
+}
 
 # GDevelop's cursor-on-object check can still hit hidden objects. On itch.io,
 # the click/touch used to start the iframe can carry into LEVEL 1 and trigger

@@ -886,15 +886,15 @@ gdjs.copyArray(runtimeScene.getObjects("Jump_Arrow_Button"), gdjs.LEVEL_322Code.
 gdjs.copyArray(runtimeScene.getObjects("Left_Arrow_Button"), gdjs.LEVEL_322Code.GDLeft_9595Arrow_9595ButtonObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Right_Arrow_Button"), gdjs.LEVEL_322Code.GDRight_9595Arrow_9595ButtonObjects1);
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDLeft_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDLeft_9595Arrow_9595ButtonObjects1[i].getBehavior("Opacity").setOpacity(150);
+    gdjs.LEVEL_322Code.GDLeft_9595Arrow_9595ButtonObjects1[i].getBehavior("Opacity").setOpacity(0);
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDRight_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDRight_9595Arrow_9595ButtonObjects1[i].getBehavior("Opacity").setOpacity(150);
+    gdjs.LEVEL_322Code.GDRight_9595Arrow_9595ButtonObjects1[i].getBehavior("Opacity").setOpacity(0);
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDJump_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDJump_9595Arrow_9595ButtonObjects1[i].getBehavior("Opacity").setOpacity(150);
+    gdjs.LEVEL_322Code.GDJump_9595Arrow_9595ButtonObjects1[i].getBehavior("Opacity").setOpacity(0);
 }
 }
 }
@@ -1013,9 +1013,9 @@ isConditionTrue_0 = false;
 }
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.window.setGameResolutionResizeMode(runtimeScene, "adaptWidth");
+{gdjs.evtTools.window.setGameResolutionResizeMode(runtimeScene, "");
 }
-{gdjs.evtTools.window.setAdaptGameResolutionAtRuntime(runtimeScene, true);
+{gdjs.evtTools.window.setAdaptGameResolutionAtRuntime(runtimeScene, false);
 }
 }
 

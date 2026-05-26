@@ -7,7 +7,7 @@
     "revision": 0
   },
   "properties": {
-    "adaptGameResolutionAtRuntime": true,
+    "adaptGameResolutionAtRuntime": false,
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
@@ -4186,7 +4186,12 @@
           "x": 45,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -4202,7 +4207,12 @@
           "x": 365,
           "y": 669,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -4218,7 +4228,12 @@
           "x": 675,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         }
@@ -7536,7 +7551,7 @@
               },
               "parameters": [
                 "",
-                "\"adaptWidth\""
+                "\"\""
               ]
             },
             {
@@ -7545,7 +7560,7 @@
               },
               "parameters": [
                 "",
-                "yes"
+                "no"
               ]
             }
           ]
@@ -9622,7 +9637,12 @@
           "x": 45,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -9638,7 +9658,12 @@
           "x": 365,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -9654,7 +9679,12 @@
           "x": 675,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         }
@@ -13631,7 +13661,7 @@
               },
               "parameters": [
                 "",
-                "\"adaptWidth\""
+                "\"\""
               ]
             },
             {
@@ -13640,7 +13670,7 @@
               },
               "parameters": [
                 "",
-                "yes"
+                "no"
               ]
             }
           ]
@@ -14882,7 +14912,12 @@
           "x": 45,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -14898,7 +14933,12 @@
           "x": 365,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -14914,7 +14954,12 @@
           "x": 675,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "opacity",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         }
@@ -20504,7 +20549,7 @@
               },
               "parameters": [
                 "",
-                "\"adaptWidth\""
+                "\"\""
               ]
             },
             {
@@ -20513,7 +20558,7 @@
               },
               "parameters": [
                 "",
-                "yes"
+                "no"
               ]
             }
           ]
