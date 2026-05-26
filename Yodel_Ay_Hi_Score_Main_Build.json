@@ -7349,7 +7349,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSG0EE223KG21BZMR4H9ZZ5J",
+          "aiGeneratedEventId": "01KSJSZ5PQ5ES83N5EAPCCPY29",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7395,42 +7395,6 @@
             },
             {
               "type": {
-                "value": "SetGameResolutionSize"
-              },
-              "parameters": [
-                "",
-                "800",
-                "780"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetGameResolutionResizeMode"
-              },
-              "parameters": [
-                "",
-                "\"\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAdaptGameResolutionAtRuntime"
-              },
-              "parameters": [
-                "",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "CenterWindow"
-              },
-              "parameters": [
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "PlatformBehavior::Gravity"
               },
               "parameters": [
@@ -7471,6 +7435,117 @@
                 "Opacity",
                 "=",
                 "120"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJSZ5PQ5ES83N5EAPCCPY29",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGameResolutionSize"
+              },
+              "parameters": [
+                "",
+                "800",
+                "780"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetGameResolutionResizeMode"
+              },
+              "parameters": [
+                "",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAdaptGameResolutionAtRuntime"
+              },
+              "parameters": [
+                "",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "CenterWindow"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJT1ZYRW2ZRJKSBN4DQ3Q47",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGameResolutionResizeMode"
+              },
+              "parameters": [
+                "",
+                "\"adaptWidth\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAdaptGameResolutionAtRuntime"
+              },
+              "parameters": [
+                "",
+                "yes"
               ]
             }
           ]
@@ -8450,6 +8525,80 @@
                 "Opacity",
                 "=",
                 "150"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJT2YQMWEEH4D5V4C64VJB8",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "=",
+                "SceneWindowWidth() * 0.1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "=",
+                "SceneWindowWidth() * 0.9 - Right_Arrow_Button.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "=",
+                "SceneWindowWidth() / 2 - Jump_Arrow_Button.Width() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
               ]
             }
           ]
@@ -13446,6 +13595,126 @@
               "parameters": [
                 "Player",
                 "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJT3KWEWRYYZY0B9JW2DVD7",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGameResolutionResizeMode"
+              },
+              "parameters": [
+                "",
+                "\"adaptWidth\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAdaptGameResolutionAtRuntime"
+              },
+              "parameters": [
+                "",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJT4A7VF0B93A0EHJSEFC4H",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "=",
+                "SceneWindowWidth() * 0.1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "=",
+                "SceneWindowWidth() * 0.9 - Right_Arrow_Button.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "=",
+                "SceneWindowWidth() / 2 - Jump_Arrow_Button.Width() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
               ]
             }
           ]
@@ -20199,6 +20468,126 @@
                 "Player",
                 "PlatformerObject",
                 "\"Left\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJT786N3QVFYVDMAYW2K1C2",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGameResolutionResizeMode"
+              },
+              "parameters": [
+                "",
+                "\"adaptWidth\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAdaptGameResolutionAtRuntime"
+              },
+              "parameters": [
+                "",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSJT7TJAXE8GTZ526WSEZQFA",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::IsMobile"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "=",
+                "SceneWindowWidth() * 0.1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Left_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "=",
+                "SceneWindowWidth() * 0.9 - Right_Arrow_Button.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Right_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "=",
+                "SceneWindowWidth() / 2 - Jump_Arrow_Button.Width() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Jump_Arrow_Button",
+                "=",
+                "SceneWindowHeight() - 100"
               ]
             }
           ]

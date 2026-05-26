@@ -21,7 +21,7 @@ gdjs.WinSceneCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.WinSceneCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 
 
-gdjs.WinSceneCode.userFunc0xb51bb0 = function GDJSInlineCode(runtimeScene) {
+gdjs.WinSceneCode.userFunc0xce75c0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // CodexTotalCollectibles display
 const total = runtimeScene.getGame().getVariables().get('TotalScoreCollectibles').getAsNumber();
@@ -34,7 +34,7 @@ gdjs.WinSceneCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.WinSceneCode.userFunc0xb51bb0(runtimeScene);
+gdjs.WinSceneCode.userFunc0xce75c0(runtimeScene);
 
 }
 

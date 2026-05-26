@@ -235,7 +235,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), 
 };gdjs.LEVEL_323Code.mapOfGDgdjs_9546LEVEL_9595323Code_9546GDFallingRockObjects1Objects = Hashtable.newFrom({"FallingRock": gdjs.LEVEL_323Code.GDFallingRockObjects1});
 gdjs.LEVEL_323Code.mapOfGDgdjs_9546LEVEL_9595323Code_9546GDPlayerObjects1Objects = Hashtable.newFrom({"Player": gdjs.LEVEL_323Code.GDPlayerObjects1});
 gdjs.LEVEL_323Code.mapOfGDgdjs_9546LEVEL_9595323Code_9546GDStarObjects1Objects = Hashtable.newFrom({"Star": gdjs.LEVEL_323Code.GDStarObjects1});
-gdjs.LEVEL_323Code.userFunc0xadfdb0 = function GDJSInlineCode(runtimeScene) {
+gdjs.LEVEL_323Code.userFunc0xcaeec8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // CodexTotalCollectibles increment
 runtimeScene.getGame().getVariables().get('TotalScoreCollectibles').add(1);
@@ -245,7 +245,7 @@ gdjs.LEVEL_323Code.eventsList1 = function(runtimeScene) {
 {
 
 
-gdjs.LEVEL_323Code.userFunc0xadfdb0(runtimeScene);
+gdjs.LEVEL_323Code.userFunc0xcaeec8(runtimeScene);
 
 }
 
@@ -1528,6 +1528,70 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.LEVEL_323Code.GDPlayerObjects1);
 {for(var i = 0, len = gdjs.LEVEL_323Code.GDPlayerObjects1.length ;i < len;++i) {
     gdjs.LEVEL_323Code.GDPlayerObjects1[i].getBehavior("PlatformerObject").simulateControl("Left");
+}
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isMobile();
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(17407516);
+}
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.window.setGameResolutionResizeMode(runtimeScene, "adaptWidth");
+}
+{gdjs.evtTools.window.setAdaptGameResolutionAtRuntime(runtimeScene, true);
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isMobile();
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Jump_Arrow_Button"), gdjs.LEVEL_323Code.GDJump_9595Arrow_9595ButtonObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Left_Arrow_Button"), gdjs.LEVEL_323Code.GDLeft_9595Arrow_9595ButtonObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Right_Arrow_Button"), gdjs.LEVEL_323Code.GDRight_9595Arrow_9595ButtonObjects1);
+{for(var i = 0, len = gdjs.LEVEL_323Code.GDLeft_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_323Code.GDLeft_9595Arrow_9595ButtonObjects1[i].setX(gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) * 0.1);
+}
+}
+{for(var i = 0, len = gdjs.LEVEL_323Code.GDLeft_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_323Code.GDLeft_9595Arrow_9595ButtonObjects1[i].setY(gdjs.evtTools.window.getGameResolutionHeight(runtimeScene) - 100);
+}
+}
+{for(var i = 0, len = gdjs.LEVEL_323Code.GDRight_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_323Code.GDRight_9595Arrow_9595ButtonObjects1[i].setX(gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) * 0.9 - (gdjs.LEVEL_323Code.GDRight_9595Arrow_9595ButtonObjects1[i].getWidth()));
+}
+}
+{for(var i = 0, len = gdjs.LEVEL_323Code.GDRight_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_323Code.GDRight_9595Arrow_9595ButtonObjects1[i].setY(gdjs.evtTools.window.getGameResolutionHeight(runtimeScene) - 100);
+}
+}
+{for(var i = 0, len = gdjs.LEVEL_323Code.GDJump_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_323Code.GDJump_9595Arrow_9595ButtonObjects1[i].setX(gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 2 - (gdjs.LEVEL_323Code.GDJump_9595Arrow_9595ButtonObjects1[i].getWidth()) / 2);
+}
+}
+{for(var i = 0, len = gdjs.LEVEL_323Code.GDJump_9595Arrow_9595ButtonObjects1.length ;i < len;++i) {
+    gdjs.LEVEL_323Code.GDJump_9595Arrow_9595ButtonObjects1[i].setY(gdjs.evtTools.window.getGameResolutionHeight(runtimeScene) - 100);
 }
 }
 }
