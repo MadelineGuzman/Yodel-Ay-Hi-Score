@@ -2658,7 +2658,7 @@
       },
       "events": [
         {
-          "aiGeneratedEventId": "01KSB8ZA1A2T1GKEF4KE0T2E31",
+          "aiGeneratedEventId": "01KSJFHA941NG23RFXGDNMDA14",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2681,20 +2681,21 @@
                 "\"BlinkOut\"",
                 "0",
                 "\"linear\"",
-                "1",
+                "\"1\"",
                 "no"
               ]
             },
             {
               "type": {
-                "value": "PlaySound"
+                "value": "PlayMusicOnChannel"
               },
               "parameters": [
                 "",
                 "Main_Amb_2_v2.wav",
+                "10",
                 "yes",
-                "",
-                ""
+                "45",
+                "1"
               ]
             }
           ]
@@ -2764,7 +2765,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSB8ZA1A2T1GKEF4KE0T2E31",
+          "aiGeneratedEventId": "01KSJFHWYRX67VY8W3QA34KP2Y",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2803,6 +2804,25 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "StopMusicChannel"
+              },
+              "parameters": [
+                "",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetFullScreen"
+              },
+              "parameters": [
+                "",
+                "yes",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "Scene"

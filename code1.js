@@ -26,10 +26,10 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("StartText"), gdjs.TitleScreenCode.GDStartTextObjects1);
 {for(var i = 0, len = gdjs.TitleScreenCode.GDStartTextObjects1.length ;i < len;++i) {
-    gdjs.TitleScreenCode.GDStartTextObjects1[i].getBehavior("Tween").addObjectOpacityTween2("BlinkOut", 0, "linear", 1, false);
+    gdjs.TitleScreenCode.GDStartTextObjects1[i].getBehavior("Tween").addObjectOpacityTween2("BlinkOut", 0, "linear", 0, false);
 }
 }
-{gdjs.evtTools.sound.playSound(runtimeScene, "Main_Amb_2_v2.wav", true, 100, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Main_Amb_2_v2.wav", 10, true, 45, 1);
 }
 }
 
@@ -115,6 +115,10 @@ if(isConditionTrue_1) {
 }
 }
 if (isConditionTrue_0) {
+{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 10);
+}
+{gdjs.evtTools.window.setFullScreen(runtimeScene, true, true);
+}
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "LEVEL 1", false);
 }
 }
