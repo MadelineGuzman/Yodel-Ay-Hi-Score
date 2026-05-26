@@ -105,7 +105,7 @@ gdjs.LEVEL_322Code.mapOfGDgdjs_9546LEVEL_9595322Code_9546GDSecret_95959595Tunnel
 gdjs.LEVEL_322Code.mapOfGDgdjs_9546LEVEL_9595322Code_9546GDFallingRockObjects1Objects = Hashtable.newFrom({"FallingRock": gdjs.LEVEL_322Code.GDFallingRockObjects1});
 gdjs.LEVEL_322Code.mapOfGDgdjs_9546LEVEL_9595322Code_9546GDPlayerObjects1Objects = Hashtable.newFrom({"Player": gdjs.LEVEL_322Code.GDPlayerObjects1});
 gdjs.LEVEL_322Code.mapOfGDgdjs_9546LEVEL_9595322Code_9546GDShroomObjects1Objects = Hashtable.newFrom({"Shroom": gdjs.LEVEL_322Code.GDShroomObjects1});
-gdjs.LEVEL_322Code.userFunc0xa65818 = function GDJSInlineCode(runtimeScene) {
+gdjs.LEVEL_322Code.userFunc0xcef430 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // CodexTotalCollectibles increment
 runtimeScene.getGame().getVariables().get('TotalScoreCollectibles').add(1);
@@ -115,7 +115,7 @@ gdjs.LEVEL_322Code.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.LEVEL_322Code.userFunc0xa65818(runtimeScene);
+gdjs.LEVEL_322Code.userFunc0xcef430(runtimeScene);
 
 }
 
@@ -189,13 +189,13 @@ let elseEventsChainSatisfied = false;
 elseEventsChainSatisfied = false;
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getScene().getVariables().getFromIndex(0).getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean();
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("MicIcon"), gdjs.LEVEL_322Code.GDMicIconObjects2);
 gdjs.copyArray(gdjs.LEVEL_322Code.GDMicToggleObjects1, gdjs.LEVEL_322Code.GDMicToggleObjects2);
 
-{runtimeScene.getScene().getVariables().getFromIndex(0).setBoolean(false);
+{runtimeScene.getGame().getVariables().get("MicEnabled").setBoolean(false);
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicToggleObjects2.length ;i < len;++i) {
     gdjs.LEVEL_322Code.GDMicToggleObjects2[i].getBehavior("Text").setText("MIC: OFF");
@@ -219,14 +219,14 @@ let isConditionTrue_0 = false;
 if (!elseEventsChainSatisfied) {
 gdjs.copyArray(runtimeScene.getObjects("MicIcon"), gdjs.LEVEL_322Code.GDMicIconObjects1);
 /* Reuse gdjs.LEVEL_322Code.GDMicToggleObjects1 */
-{runtimeScene.getScene().getVariables().getFromIndex(0).setBoolean(true);
+{runtimeScene.getGame().getVariables().get("MicEnabled").setBoolean(true);
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicToggleObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDMicToggleObjects1[i].getBehavior("Text").setText("MIC: ON");
+    gdjs.LEVEL_322Code.GDMicToggleObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "MIC: ON" : "MIC: OFF");
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicIconObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDMicIconObjects1[i].setColor("0;255;0");
+    gdjs.LEVEL_322Code.GDMicIconObjects1[i].setColor(runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "0;255;0" : "255;0;0");
 }
 }
 elseEventsChainSatisfied = true;
@@ -428,7 +428,7 @@ for (var i = 0, k = 0, l = gdjs.LEVEL_322Code.GDPlayerObjects1.length;i<l;++i) {
 gdjs.LEVEL_322Code.GDPlayerObjects1.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getScene().getVariables().getFromIndex(0).getAsBoolean();
+{isConditionTrue_0 = runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean();
 }
 }
 }
@@ -1168,10 +1168,10 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("MicIcon"), gdjs.LEVEL_322Code.GDMicIconObjects1);
 gdjs.copyArray(runtimeScene.getObjects("MicToggle"), gdjs.LEVEL_322Code.GDMicToggleObjects1);
-{runtimeScene.getScene().getVariables().getFromIndex(0).setBoolean(true);
+{/* Preserve global MicEnabled preference. */
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicToggleObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDMicToggleObjects1[i].getBehavior("Text").setText("MIC: ON");
+    gdjs.LEVEL_322Code.GDMicToggleObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "MIC: ON" : "MIC: OFF");
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicToggleObjects1.length ;i < len;++i) {
@@ -1191,7 +1191,7 @@ gdjs.copyArray(runtimeScene.getObjects("MicToggle"), gdjs.LEVEL_322Code.GDMicTog
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicIconObjects1.length ;i < len;++i) {
-    gdjs.LEVEL_322Code.GDMicIconObjects1[i].setColor("0;255;0");
+    gdjs.LEVEL_322Code.GDMicIconObjects1[i].setColor(runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "0;255;0" : "255;0;0");
 }
 }
 {for(var i = 0, len = gdjs.LEVEL_322Code.GDMicIconObjects1.length ;i < len;++i) {

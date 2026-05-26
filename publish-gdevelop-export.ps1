@@ -249,6 +249,7 @@ $data = $data.Replace("\\Yodel_1", "").Replace("\Yodel_1", "")
 # Fix canvas centering: GDevelop exports sizeOnStartupMode as "adaptWidth" which
 # pins the canvas to the left edge. "noChanges" lets the runtime center it correctly.
 $data = $data.Replace('"sizeOnStartupMode":"adaptWidth"', '"sizeOnStartupMode":"noChanges"')
+$data = $data.Replace('"adaptGameResolutionAtRuntime":true', '"adaptGameResolutionAtRuntime":false')
 Set-Content -LiteralPath $dataPath -Value $data -NoNewline
 Write-Host "Fixed sizeOnStartupMode for centered canvas."
 
@@ -267,11 +268,39 @@ Get-ChildItem -File -LiteralPath $workspace -Filter "code*.js" | ForEach-Object 
             '${1}0${2}'
         )
     }
+    if ($sceneCode -match "GDMicToggleObjects") {
+        $sceneCode = $sceneCode.Replace(
+            'runtimeScene.getScene().getVariables().getFromIndex(0)',
+            'runtimeScene.getGame().getVariables().get("MicEnabled")'
+        )
+        $sceneCode = [regex]::Replace(
+            $sceneCode,
+            '((?:gdjs\.[A-Za-z0-9_]+\.GDMicToggleObjects\d+\[i\])\.getBehavior\("Text"\)\.setText\()"MIC: ON"(\);)',
+            '${1}runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "MIC: ON" : "MIC: OFF"${2}'
+        )
+        $sceneCode = [regex]::Replace(
+            $sceneCode,
+            '((?:gdjs\.[A-Za-z0-9_]+\.GDMicIconObjects\d+\[i\])\.setColor\()"0;255;0"(\);)',
+            '${1}runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "0;255;0" : "255;0;0"${2}'
+        )
+
+        # Preserve the player's mic preference across scene transitions. The
+        # first setBoolean(true) in these generated files is the "turn mic on"
+        # branch of the toggle; later ones are scene-start initializers.
+        $setMicOnPattern = 'runtimeScene\.getGame\(\)\.getVariables\(\)\.get\("MicEnabled"\)\.setBoolean\(true\);'
+        $setMicOnMatches = [regex]::Matches($sceneCode, $setMicOnPattern)
+        if ($setMicOnMatches.Count -gt 1) {
+            for ($i = $setMicOnMatches.Count - 1; $i -ge 1; $i--) {
+                $match = $setMicOnMatches[$i]
+                $sceneCode = $sceneCode.Remove($match.Index, $match.Length).Insert($match.Index, '/* Preserve global MicEnabled preference. */')
+            }
+        }
+    }
     if ($sceneCode -ne $originalSceneCode) {
         Set-Content -LiteralPath $_.FullName -Value $sceneCode -NoNewline
     }
 }
-Write-Host "Patched mobile resize and hidden canvas arrow visuals."
+Write-Host "Patched mobile resize, hidden canvas arrow visuals, and global mic preference."
 
 # Add mobile-only controls outside the GDevelop canvas, so they can sit in the
 # letterbox/black area without changing the game layout or desktop behavior.

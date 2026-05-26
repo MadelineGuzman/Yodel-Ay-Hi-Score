@@ -1893,6 +1893,11 @@
   "objectsGroups": [],
   "variables": [
     {
+      "name": "MicEnabled",
+      "type": "boolean",
+      "value": true
+    },
+    {
       "name": "RespawnX",
       "type": "number",
       "value": 200
@@ -3077,8 +3082,8 @@
       "variables": [
         {
           "name": "MicEnabled",
-          "type": "boolean",
-          "value": true
+          "type": "string",
+          "value": "null"
         },
         {
           "name": "Transitioning",
@@ -4287,12 +4292,7 @@
           "x": 45,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -4308,12 +4308,7 @@
           "x": 365,
           "y": 669,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -4329,12 +4324,7 @@
           "x": 675,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -8921,7 +8911,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSJZ2R1PD7TVK7FG8CZRX9BB",
+          "aiGeneratedEventId": "01KSK0R53YTK0E6H9X57188H5A",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9015,6 +9005,7 @@
           "actions": [],
           "events": [
             {
+              "aiGeneratedEventId": "01KSK0RQZ2VPKVHVNQ0JXMAWD6",
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9062,6 +9053,7 @@
               ]
             },
             {
+              "aiGeneratedEventId": "01KSK0RQZ2VPKVHVNQ0JXMAWD6",
               "type": "BuiltinCommonInstructions::Else",
               "conditions": [],
               "actions": [
@@ -9264,8 +9256,8 @@
       "variables": [
         {
           "name": "MicEnabled",
-          "type": "boolean",
-          "value": true
+          "type": "string",
+          "value": "null"
         },
         {
           "name": "Transitioning",
@@ -10123,12 +10115,7 @@
           "x": 45,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -10144,12 +10131,7 @@
           "x": 365,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -10165,12 +10147,7 @@
           "x": 675,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -14676,7 +14653,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSJZHTRN1MM6KF78GPAH8Q23",
+          "aiGeneratedEventId": "01KSK0SSCVHWJQ133KB3Q46TTY",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -15060,8 +15037,8 @@
       "variables": [
         {
           "name": "MicEnabled",
-          "type": "boolean",
-          "value": true
+          "type": "string",
+          "value": "null"
         },
         {
           "name": "EndingPlaying",
@@ -16063,12 +16040,7 @@
           "x": 45,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -16084,12 +16056,7 @@
           "x": 365,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -16105,12 +16072,7 @@
           "x": 675,
           "y": 675,
           "zOrder": 0,
-          "numberProperties": [
-            {
-              "name": "opacity",
-              "value": 0
-            }
-          ],
+          "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -19917,7 +19879,7 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSJZP8KC9VRQEA53FP0NXEDV",
+          "aiGeneratedEventId": "01KSK0TRGKN7HGXFZFZB7TK85G",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
