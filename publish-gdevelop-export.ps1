@@ -204,12 +204,14 @@ $centeredStyle = @'
 
 			#yodel-left-control {
 				bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
-				left: 22px;
+				left: 18%;
+				transform: translateX(-50%);
 			}
 
 			#yodel-right-control {
 				bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
-				left: 106px;
+				left: 82%;
+				transform: translateX(-50%);
 			}
 
 			#yodel-jump-control {
