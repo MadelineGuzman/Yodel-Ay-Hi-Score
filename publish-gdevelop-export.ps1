@@ -158,6 +158,9 @@ $centeredStyle = @'
 			padding: 0;
 			background-color: #000000;
 			overflow: hidden;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			user-select: none;
 		}
 
 		body {
@@ -198,6 +201,10 @@ $centeredStyle = @'
 				position: fixed;
 				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.55);
 				touch-action: none;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-touch-callout: none;
+				-webkit-user-drag: none;
+				-webkit-user-select: none;
 				user-select: none;
 				width: 68px;
 			}
@@ -307,15 +314,18 @@ Write-Host "Patched mobile resize, hidden canvas arrow visuals, and global mic p
 $index = Get-Content -Raw -LiteralPath $indexPath
 $mobileControlsMarkup = @'
 	<div id="yodel-mobile-controls" aria-hidden="true">
-		<button class="yodel-mobile-control" id="yodel-left-control" type="button" aria-label="Move left">◀</button>
-		<button class="yodel-mobile-control" id="yodel-right-control" type="button" aria-label="Move right">▶</button>
-		<button class="yodel-mobile-control" id="yodel-jump-control" type="button" aria-label="Jump">▲</button>
+		<button class="yodel-mobile-control" id="yodel-left-control" type="button" aria-label="Move left" draggable="false">◀</button>
+		<button class="yodel-mobile-control" id="yodel-right-control" type="button" aria-label="Move right" draggable="false">▶</button>
+		<button class="yodel-mobile-control" id="yodel-jump-control" type="button" aria-label="Jump" draggable="false">▲</button>
 	</div>
 
 	<script>
 	(function() {
 		const controls = document.getElementById('yodel-mobile-controls');
 		if (!controls) return;
+		controls.addEventListener('selectstart', (event) => event.preventDefault());
+		controls.addEventListener('dragstart', (event) => event.preventDefault());
+		controls.addEventListener('touchmove', (event) => event.preventDefault(), { passive: false });
 
 		const keyState = new Map();
 		const keyInfo = {
@@ -377,8 +387,11 @@ $mobileControlsMarkup = @'
 			button.addEventListener('pointerdown', (event) => {
 				event.preventDefault();
 				press(name);
-				window.setTimeout(() => release(name), 90);
+				window.setTimeout(() => release(name), 220);
 			});
+			button.addEventListener('pointerup', (event) => event.preventDefault());
+			button.addEventListener('pointercancel', (event) => event.preventDefault());
+			button.addEventListener('pointerleave', (event) => event.preventDefault());
 			button.addEventListener('contextmenu', (event) => event.preventDefault());
 		}
 
