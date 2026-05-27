@@ -1672,6 +1672,54 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Emotes/Normal/36b14cf90aa3e4bc9aace67bee3a4d3aca543a2e7a6bd1fc43e9c08124da597b_Circle Emote_Style 7.png",
           "name": "Circle Emote_Style 7.png"
         }
+      },
+      {
+        "file": "Mic_Icon_1.2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.6.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.7.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -4348,14 +4396,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 44,
-          "keepRatio": true,
+          "height": 37,
           "layer": "UI",
           "name": "MicIcon",
           "persistentUuid": "d7fcaa9e-2e9a-4c97-98f5-10b09e9f3cde",
-          "width": 29,
-          "x": 673,
-          "y": 4,
+          "width": 32,
+          "x": 668,
+          "y": 0,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -7399,12 +7446,12 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Emote Circle.png",
+                      "image": "Mic_Icon_1.2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7420,20 +7467,68 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 7,
-                            "y": 7
+                            "x": 0,
+                            "y": 0
                           },
                           {
-                            "x": 25,
-                            "y": 7
+                            "x": 768,
+                            "y": 0
                           },
                           {
-                            "x": 25,
-                            "y": 25
+                            "x": 768,
+                            "y": 1024
                           },
                           {
-                            "x": 7,
-                            "y": 25
+                            "x": 0,
+                            "y": 1024
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Mic_Icon_1.3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 768,
+                            "y": 0
+                          },
+                          {
+                            "x": 768,
+                            "y": 1024
+                          },
+                          {
+                            "x": 0,
+                            "y": 1024
                           }
                         ]
                       ]
@@ -9242,7 +9337,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9991260522560633,
+        "zoomFactor": 1.939462715547913,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -10169,15 +10264,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
+          "customSize": true,
+          "depth": 0.9411764705882353,
+          "height": 37,
           "layer": "UI",
           "name": "MicIcon",
           "persistentUuid": "131d85ea-8982-4c84-9194-a88272b35b01",
-          "width": 0,
-          "x": 668,
-          "y": 7,
+          "width": 32,
+          "x": 665,
+          "y": 0,
           "zOrder": 59,
           "numberProperties": [],
           "stringProperties": [],
@@ -12648,16 +12743,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "Style 1",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 1.png",
+                      "image": "Mic_Icon_1.4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12677,16 +12772,16 @@
                             "y": 0
                           },
                           {
-                            "x": 32,
+                            "x": 768,
                             "y": 0
                           },
                           {
-                            "x": 32,
-                            "y": 38
+                            "x": 768,
+                            "y": 1024
                           },
                           {
                             "x": 0,
-                            "y": 38
+                            "y": 1024
                           }
                         ]
                       ]
@@ -12696,16 +12791,16 @@
               ]
             },
             {
-              "name": "Style 2",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 2.png",
+                      "image": "Mic_Icon_1.5.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12725,256 +12820,16 @@
                             "y": 0
                           },
                           {
-                            "x": 32,
+                            "x": 768,
                             "y": 0
                           },
                           {
-                            "x": 32,
-                            "y": 38
+                            "x": 768,
+                            "y": 1024
                           },
                           {
                             "x": 0,
-                            "y": 38
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Style 3",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 38
-                          },
-                          {
-                            "x": 0,
-                            "y": 38
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Style 4",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 38
-                          },
-                          {
-                            "x": 0,
-                            "y": 38
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Style 5",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 38
-                          },
-                          {
-                            "x": 0,
-                            "y": 38
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Style 6",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 38
-                          },
-                          {
-                            "x": 0,
-                            "y": 38
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Style 7",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Circle Emote_Style 7.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 38
-                          },
-                          {
-                            "x": 0,
-                            "y": 38
+                            "y": 1024
                           }
                         ]
                       ]
@@ -15023,7 +14878,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.818845445633693,
+        "zoomFactor": 2.7021659115268166,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -16094,15 +15949,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 37,
           "keepRatio": true,
           "layer": "UI",
           "name": "MicIcon",
           "persistentUuid": "839f096e-f14b-4689-820d-d3acea8adaf8",
-          "width": 0,
-          "x": 667,
-          "y": 5,
+          "width": 32,
+          "x": 665,
+          "y": 0,
           "zOrder": 68,
           "numberProperties": [],
           "stringProperties": [],
@@ -19626,12 +19482,12 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Emote Circle.png",
+                      "image": "Mic_Icon_1.6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -19647,20 +19503,68 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 7,
-                            "y": 7
+                            "x": 0,
+                            "y": 0
                           },
                           {
-                            "x": 25,
-                            "y": 7
+                            "x": 768,
+                            "y": 0
                           },
                           {
-                            "x": 25,
-                            "y": 25
+                            "x": 768,
+                            "y": 1024
                           },
                           {
-                            "x": 7,
-                            "y": 25
+                            "x": 0,
+                            "y": 1024
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Mic_Icon_1.7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 768,
+                            "y": 0
+                          },
+                          {
+                            "x": 768,
+                            "y": 1024
+                          },
+                          {
+                            "x": 0,
+                            "y": 1024
                           }
                         ]
                       ]
