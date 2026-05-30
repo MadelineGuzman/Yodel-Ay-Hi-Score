@@ -403,7 +403,7 @@ if ($index -notmatch 'id="yodel-mobile-controls"') {
 # Mobile browsers fire touch events during page navigation that carry into the
 # game and skip the title screen before the player intends to interact.
 $phantomBlockScript = @'
-        var inputUnblockTime = Date.now() + 1500;
+        var inputUnblockTime = 0;
         var blockPhantomInput = function(e) {
             if (Date.now() < inputUnblockTime) {
                 e.stopPropagation();
@@ -414,11 +414,21 @@ $phantomBlockScript = @'
         document.addEventListener('pointerdown', blockPhantomInput, { capture: true });
 
 '@
+$startLoopPatch = @'
+            inputUnblockTime = Date.now() + 2000;
+            game.startGameLoop();
+'@
 $index = Get-Content -Raw -LiteralPath $indexPath
 if ($index -notmatch 'blockPhantomInput') {
     $index = $index.Replace("        //Initialization", "$phantomBlockScript        //Initialization")
     Set-Content -LiteralPath $indexPath -Value $index -NoNewline
     Write-Host "Injected phantom-touch blocker."
+}
+$index = Get-Content -Raw -LiteralPath $indexPath
+if ($index -notmatch 'inputUnblockTime = Date.now') {
+    $index = $index.Replace("            game.startGameLoop();", $startLoopPatch)
+    Set-Content -LiteralPath $indexPath -Value $index -NoNewline
+    Write-Host "Patched phantom-touch timer to reset on game loop start."
 }
 
 # Mute audio when the player navigates away from the tab, resume on return.
