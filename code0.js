@@ -53,6 +53,20 @@ gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 0.5;
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "HowToPlay", false);
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 2.5;
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1);
