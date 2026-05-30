@@ -409,9 +409,9 @@ $phantomBlockScript = @'
                 e.stopPropagation();
             }
         };
-        document.addEventListener('touchstart', blockPhantomInput, { capture: true, passive: true });
-        document.addEventListener('mousedown', blockPhantomInput, { capture: true });
-        document.addEventListener('pointerdown', blockPhantomInput, { capture: true });
+        window.addEventListener('touchstart', blockPhantomInput, { capture: true, passive: true });
+        window.addEventListener('mousedown', blockPhantomInput, { capture: true });
+        window.addEventListener('pointerdown', blockPhantomInput, { capture: true });
 
 '@
 $startLoopPatch = @'
