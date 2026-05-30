@@ -2653,7 +2653,6 @@
       },
       "events": [
         {
-          "aiGeneratedEventId": "01KSB9NJEE9R7VMHFS6MEARZEB",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2668,31 +2667,6 @@
           "actions": [
             {
               "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "BlackFadeSprite",
-                "Opacity",
-                "=",
-                "255"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "BlackFadeSprite",
-                "Tween",
-                "\"FadeInSplash\"",
-                "0",
-                "\"linear\"",
-                "0.75",
-                "no"
-              ]
-            },
-            {
-              "type": {
                 "value": "ResetTimer"
               },
               "parameters": [
@@ -2703,7 +2677,6 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSB9NJEE9R7VMHFS6MEARZEB",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2714,41 +2687,14 @@
                 "",
                 "\"SplashTimer\"",
                 ">",
-                "2.5"
+                "0.5"
               ]
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "BlackFadeSprite",
-                "Tween",
-                "\"FadeOutSplash\"",
-                "255",
-                "\"linear\"",
-                "0.75",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "aiGeneratedEventId": "01KSB9NJEE9R7VMHFS6MEARZEB",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"SplashTimer\"",
-                ">",
-                "3.25"
-              ]
+              "parameters": []
             }
           ],
           "actions": [
@@ -3279,7 +3225,7 @@
                 "",
                 "\"TitleTimer\"",
                 ">",
-                "1.0"
+                "1.5"
               ]
             }
           ],
@@ -3309,7 +3255,7 @@
               },
               "parameters": [
                 "",
-                "\"LEVEL 1\"",
+                "\"HowToPlay\"",
                 "no"
               ]
             }
