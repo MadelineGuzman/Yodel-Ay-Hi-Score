@@ -399,36 +399,33 @@ if ($index -notmatch 'id="yodel-mobile-controls"') {
     Write-Host "Injected mobile DOM controls."
 }
 
-# Block phantom touch/click events for 1500ms after game start.
-# Mobile browsers fire touch events during page navigation that carry into the
-# game and skip the title screen before the player intends to interact.
-$phantomBlockScript = @'
-        var inputUnblockTime = 0;
-        var blockPhantomInput = function(e) {
-            if (Date.now() < inputUnblockTime) {
-                e.stopPropagation();
-            }
-        };
-        window.addEventListener('touchstart', blockPhantomInput, { capture: true, passive: true });
-        window.addEventListener('mousedown', blockPhantomInput, { capture: true });
-        window.addEventListener('pointerdown', blockPhantomInput, { capture: true });
-
-'@
-$startLoopPatch = @'
-            inputUnblockTime = Date.now() + 2000;
-            game.startGameLoop();
-'@
-$index = Get-Content -Raw -LiteralPath $indexPath
-if ($index -notmatch 'blockPhantomInput') {
-    $index = $index.Replace("        //Initialization", "$phantomBlockScript        //Initialization")
-    Set-Content -LiteralPath $indexPath -Value $index -NoNewline
-    Write-Host "Injected phantom-touch blocker."
+# Patch hasAnyTouchOrMouseStarted in inputtools.js to respect a global block flag.
+# DOM-level event interception is unreliable because GDevelop's input manager is
+# populated before propagation can be stopped. Patching the function directly is
+# the only guaranteed way to block phantom touches on mobile.
+$inputToolsPath = Join-Path $workspace "events-tools/inputtools.js"
+if (Test-Path -LiteralPath $inputToolsPath) {
+    $inputTools = Get-Content -Raw -LiteralPath $inputToolsPath
+    $oldFn = 'n.hasAnyTouchOrMouseStarted=e=>e.getGame().getInputManager().getStartedTouchIdentifiers().length>0'
+    $newFn = 'n.hasAnyTouchOrMouseStarted=e=>!window._gdInputReady&&(window._gdInputReady=false)||(!window._gdInputReady?false:e.getGame().getInputManager().getStartedTouchIdentifiers().length>0)'
+    # Simpler readable patch:
+    $newFn = 'n.hasAnyTouchOrMouseStarted=e=>(window._gdInputReady===true)&&e.getGame().getInputManager().getStartedTouchIdentifiers().length>0'
+    if ($inputTools -notmatch '_gdInputReady') {
+        $inputTools = $inputTools.Replace($oldFn, $newFn)
+        Set-Content -LiteralPath $inputToolsPath -Value $inputTools -NoNewline
+        Write-Host "Patched hasAnyTouchOrMouseStarted with input-ready guard."
+    }
 }
+# Set the flag 2 seconds after the game loop starts.
+$startLoopPatch = @'
+            game.startGameLoop();
+            setTimeout(function() { window._gdInputReady = true; }, 2000);
+'@
 $index = Get-Content -Raw -LiteralPath $indexPath
-if ($index -notmatch 'inputUnblockTime = Date.now') {
+if ($index -notmatch '_gdInputReady') {
     $index = $index.Replace("            game.startGameLoop();", $startLoopPatch)
     Set-Content -LiteralPath $indexPath -Value $index -NoNewline
-    Write-Host "Patched phantom-touch timer to reset on game loop start."
+    Write-Host "Injected input-ready flag setter in index.html."
 }
 
 # Mute audio when the player navigates away from the tab, resume on return.
