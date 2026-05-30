@@ -21,6 +21,10 @@ gdjs.SplashScreenCode.GDRight_9595Arrow_9595ButtonObjects1= [];
 gdjs.SplashScreenCode.GDRight_9595Arrow_9595ButtonObjects2= [];
 gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects2= [];
+gdjs.SplashScreenCode.GDMicIconObjects1= [];
+gdjs.SplashScreenCode.GDMicIconObjects2= [];
+gdjs.SplashScreenCode.GDMicToggleObjects1= [];
+gdjs.SplashScreenCode.GDMicToggleObjects2= [];
 
 
 gdjs.SplashScreenCode.eventsList0 = function(runtimeScene) {
@@ -118,6 +122,10 @@ gdjs.SplashScreenCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.SplashScreenCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.SplashScreenCode.GDMicIconObjects1.length = 0;
+gdjs.SplashScreenCode.GDMicIconObjects2.length = 0;
+gdjs.SplashScreenCode.GDMicToggleObjects1.length = 0;
+gdjs.SplashScreenCode.GDMicToggleObjects2.length = 0;
 
 gdjs.SplashScreenCode.eventsList0(runtimeScene);
 gdjs.SplashScreenCode.GDSplashImageObjects1.length = 0;
@@ -140,6 +148,10 @@ gdjs.SplashScreenCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.SplashScreenCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.SplashScreenCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.SplashScreenCode.GDMicIconObjects1.length = 0;
+gdjs.SplashScreenCode.GDMicIconObjects2.length = 0;
+gdjs.SplashScreenCode.GDMicToggleObjects1.length = 0;
+gdjs.SplashScreenCode.GDMicToggleObjects2.length = 0;
 
 
 return;

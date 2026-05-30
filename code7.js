@@ -27,6 +27,10 @@ gdjs.HowToPlayCode.GDRight_9595Arrow_9595ButtonObjects1= [];
 gdjs.HowToPlayCode.GDRight_9595Arrow_9595ButtonObjects2= [];
 gdjs.HowToPlayCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.HowToPlayCode.GDJump_9595Arrow_9595ButtonObjects2= [];
+gdjs.HowToPlayCode.GDMicIconObjects1= [];
+gdjs.HowToPlayCode.GDMicIconObjects2= [];
+gdjs.HowToPlayCode.GDMicToggleObjects1= [];
+gdjs.HowToPlayCode.GDMicToggleObjects2= [];
 
 
 gdjs.HowToPlayCode.eventsList0 = function(runtimeScene) {
@@ -200,6 +204,10 @@ gdjs.HowToPlayCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.HowToPlayCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.HowToPlayCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.HowToPlayCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.HowToPlayCode.GDMicIconObjects1.length = 0;
+gdjs.HowToPlayCode.GDMicIconObjects2.length = 0;
+gdjs.HowToPlayCode.GDMicToggleObjects1.length = 0;
+gdjs.HowToPlayCode.GDMicToggleObjects2.length = 0;
 
 gdjs.HowToPlayCode.eventsList0(runtimeScene);
 gdjs.HowToPlayCode.GDHowToPlayTitleObjects1.length = 0;
@@ -228,6 +236,10 @@ gdjs.HowToPlayCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.HowToPlayCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.HowToPlayCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.HowToPlayCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.HowToPlayCode.GDMicIconObjects1.length = 0;
+gdjs.HowToPlayCode.GDMicIconObjects2.length = 0;
+gdjs.HowToPlayCode.GDMicToggleObjects1.length = 0;
+gdjs.HowToPlayCode.GDMicToggleObjects2.length = 0;
 
 
 return;

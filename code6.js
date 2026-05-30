@@ -34,6 +34,12 @@ gdjs.CreditsCode.GDRight_9595Arrow_9595ButtonObjects3= [];
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects3= [];
+gdjs.CreditsCode.GDMicIconObjects1= [];
+gdjs.CreditsCode.GDMicIconObjects2= [];
+gdjs.CreditsCode.GDMicIconObjects3= [];
+gdjs.CreditsCode.GDMicToggleObjects1= [];
+gdjs.CreditsCode.GDMicToggleObjects2= [];
+gdjs.CreditsCode.GDMicToggleObjects3= [];
 
 
 gdjs.CreditsCode.mapOfGDgdjs_9546CreditsCode_9546GDBackButtonObjects1Objects = Hashtable.newFrom({"BackButton": gdjs.CreditsCode.GDBackButtonObjects1});
@@ -655,7 +661,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9426436);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9511508);
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(1);
@@ -760,6 +766,12 @@ gdjs.CreditsCode.GDRight_9595Arrow_9595ButtonObjects3.length = 0;
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects3.length = 0;
+gdjs.CreditsCode.GDMicIconObjects1.length = 0;
+gdjs.CreditsCode.GDMicIconObjects2.length = 0;
+gdjs.CreditsCode.GDMicIconObjects3.length = 0;
+gdjs.CreditsCode.GDMicToggleObjects1.length = 0;
+gdjs.CreditsCode.GDMicToggleObjects2.length = 0;
+gdjs.CreditsCode.GDMicToggleObjects3.length = 0;
 
 gdjs.CreditsCode.eventsList6(runtimeScene);
 gdjs.CreditsCode.GDCreditsTitleObjects1.length = 0;
@@ -795,6 +807,12 @@ gdjs.CreditsCode.GDRight_9595Arrow_9595ButtonObjects3.length = 0;
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.CreditsCode.GDJump_9595Arrow_9595ButtonObjects3.length = 0;
+gdjs.CreditsCode.GDMicIconObjects1.length = 0;
+gdjs.CreditsCode.GDMicIconObjects2.length = 0;
+gdjs.CreditsCode.GDMicIconObjects3.length = 0;
+gdjs.CreditsCode.GDMicToggleObjects1.length = 0;
+gdjs.CreditsCode.GDMicToggleObjects2.length = 0;
+gdjs.CreditsCode.GDMicToggleObjects3.length = 0;
 
 
 return;

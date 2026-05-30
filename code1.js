@@ -15,6 +15,10 @@ gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects1= [];
 gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects2= [];
 gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2= [];
+gdjs.TitleScreenCode.GDMicIconObjects1= [];
+gdjs.TitleScreenCode.GDMicIconObjects2= [];
+gdjs.TitleScreenCode.GDMicToggleObjects1= [];
+gdjs.TitleScreenCode.GDMicToggleObjects2= [];
 
 
 gdjs.TitleScreenCode.mapOfGDgdjs_9546TitleScreenCode_9546GDCreditsButtonObjects1Objects = Hashtable.newFrom({"CreditsButton": gdjs.TitleScreenCode.GDCreditsButtonObjects1});
@@ -157,7 +161,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.TitleScreenCode.mapOfGDgdjs_9546TitleScreenCode_9546GDCreditsButtonObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10296188);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(11377820);
 }
 }
 }
@@ -188,6 +192,10 @@ gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.TitleScreenCode.GDMicIconObjects1.length = 0;
+gdjs.TitleScreenCode.GDMicIconObjects2.length = 0;
+gdjs.TitleScreenCode.GDMicToggleObjects1.length = 0;
+gdjs.TitleScreenCode.GDMicToggleObjects2.length = 0;
 
 gdjs.TitleScreenCode.eventsList0(runtimeScene);
 gdjs.TitleScreenCode.GDTitleImageObjects1.length = 0;
@@ -204,6 +212,10 @@ gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.TitleScreenCode.GDRight_9595Arrow_9595ButtonObjects2.length = 0;
 gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects1.length = 0;
 gdjs.TitleScreenCode.GDJump_9595Arrow_9595ButtonObjects2.length = 0;
+gdjs.TitleScreenCode.GDMicIconObjects1.length = 0;
+gdjs.TitleScreenCode.GDMicIconObjects2.length = 0;
+gdjs.TitleScreenCode.GDMicToggleObjects1.length = 0;
+gdjs.TitleScreenCode.GDMicToggleObjects2.length = 0;
 
 
 return;

@@ -276,10 +276,8 @@ Get-ChildItem -File -LiteralPath $workspace -Filter "code*.js" | ForEach-Object 
         )
     }
     if ($sceneCode -match "GDMicToggleObjects") {
-        $sceneCode = $sceneCode.Replace(
-            'runtimeScene.getScene().getVariables().getFromIndex(0)',
-            'runtimeScene.getGame().getVariables().get("MicEnabled")'
-        )
+        # Patch initial MicToggle display to reflect current global MicEnabled state
+        # rather than always showing MIC: ON at scene start.
         $sceneCode = [regex]::Replace(
             $sceneCode,
             '((?:gdjs\.[A-Za-z0-9_]+\.GDMicToggleObjects\d+\[i\])\.getBehavior\("Text"\)\.setText\()"MIC: ON"(\);)',
@@ -290,18 +288,6 @@ Get-ChildItem -File -LiteralPath $workspace -Filter "code*.js" | ForEach-Object 
             '((?:gdjs\.[A-Za-z0-9_]+\.GDMicIconObjects\d+\[i\])\.setColor\()"0;255;0"(\);)',
             '${1}runtimeScene.getGame().getVariables().get("MicEnabled").getAsBoolean() ? "0;255;0" : "255;0;0"${2}'
         )
-
-        # Preserve the player's mic preference across scene transitions. The
-        # first setBoolean(true) in these generated files is the "turn mic on"
-        # branch of the toggle; later ones are scene-start initializers.
-        $setMicOnPattern = 'runtimeScene\.getGame\(\)\.getVariables\(\)\.get\("MicEnabled"\)\.setBoolean\(true\);'
-        $setMicOnMatches = [regex]::Matches($sceneCode, $setMicOnPattern)
-        if ($setMicOnMatches.Count -gt 1) {
-            for ($i = $setMicOnMatches.Count - 1; $i -ge 1; $i--) {
-                $match = $setMicOnMatches[$i]
-                $sceneCode = $sceneCode.Remove($match.Index, $match.Length).Insert($match.Index, '/* Preserve global MicEnabled preference. */')
-            }
-        }
     }
     if ($sceneCode -ne $originalSceneCode) {
         Set-Content -LiteralPath $_.FullName -Value $sceneCode -NoNewline

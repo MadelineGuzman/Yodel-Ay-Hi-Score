@@ -1744,6 +1744,70 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Fantasy UI Borders/Default Size/Panels/4530207f9820c0990ac1354b1c323ac80c2df8a9280996d4e00f0c34e378e0d3_Default-panel (31).png",
           "name": "Default-panel (31).png"
         }
+      },
+      {
+        "file": "Mic_Icon_1.8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.8.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.9.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.10.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.11.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.12.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon_1.13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon_1.13.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon1.5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon1.5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Mic_Icon1.4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mic_Icon1.4.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -1945,6 +2009,159 @@
         "lineHeight": 0,
         "color": "255;255;255"
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "c8555b45320a7030ce17029b1af5be2ea5c784f78e891928e0c8fd800f9ee863",
+      "name": "MicIcon",
+      "persistentUuid": "265b337d-3f8e-40f1-8a06-ecc5fa9a4f82",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Mic_Icon1.5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 63,
+                        "y": 306
+                      },
+                      {
+                        "x": 961,
+                        "y": 306
+                      },
+                      {
+                        "x": 961,
+                        "y": 1200
+                      },
+                      {
+                        "x": 63,
+                        "y": 1200
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Mic_Icon1.4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 63,
+                        "y": 306
+                      },
+                      {
+                        "x": 961,
+                        "y": 306
+                      },
+                      {
+                        "x": 961,
+                        "y": 1200
+                      },
+                      {
+                        "x": 63,
+                        "y": 1200
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "MicToggle",
+      "persistentUuid": "41fe2470-a7db-4114-87fa-8b05d60cbdf4",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "MIC: ON",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "74;144;226",
+        "outlineThickness": 4,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "MIC: ON",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1961,6 +2178,12 @@
       },
       {
         "objectName": "FadeTransition"
+      },
+      {
+        "objectName": "MicIcon"
+      },
+      {
+        "objectName": "MicToggle"
       }
     ]
   },
@@ -3322,8 +3545,8 @@
         },
         {
           "name": "MicEnabled",
-          "type": "string",
-          "value": "null"
+          "type": "boolean",
+          "value": true
         },
         {
           "name": "Transitioning",
@@ -7499,159 +7722,6 @@
           }
         },
         {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "MicToggle",
-          "persistentUuid": "41fe2470-a7db-4114-87fa-8b05d60cbdf4",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "MIC: ON",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "MIC: ON",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
-            "lineHeight": 0,
-            "color": "255;255;255"
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "c8555b45320a7030ce17029b1af5be2ea5c784f78e891928e0c8fd800f9ee863",
-          "name": "MicIcon",
-          "persistentUuid": "265b337d-3f8e-40f1-8a06-ecc5fa9a4f82",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mic_Icon_1.2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 1024
-                          },
-                          {
-                            "x": 0,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mic_Icon_1.3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 1024
-                          },
-                          {
-                            "x": 0,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "cd27af49cc2d9fedd8f084c78a01329109be804c2cf4fdfd42f3a3734fbfbe8b",
           "name": "LandingRing",
@@ -7830,12 +7900,6 @@
             "objectName": "Flower_Count"
           },
           {
-            "objectName": "MicToggle"
-          },
-          {
-            "objectName": "MicIcon"
-          },
-          {
             "objectName": "LandingRing"
           }
         ]
@@ -7987,15 +8051,6 @@
                 "MicIcon",
                 "=",
                 "MicToggle.Y() + MicToggle.Height()/2 - MicIcon.Height()/2"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "MicIcon",
-                "\"0;255;0\""
               ]
             },
             {
@@ -9373,6 +9428,17 @@
                 "MicToggle",
                 "\"UI\""
               ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "MicIcon",
+                "Animation",
+                "=",
+                "0"
+              ]
             }
           ]
         },
@@ -9385,7 +9451,7 @@
                 "value": "IsCursorOnObject"
               },
               "parameters": [
-                "MicToggle",
+                "MicIcon",
                 "",
                 "yes",
                 ""
@@ -9407,10 +9473,20 @@
               "parameters": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "MicEnabled",
+                "Toggle",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
-              "aiGeneratedEventId": "01KSK0RQZ2VPKVHVNQ0JXMAWD6",
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9427,14 +9503,43 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetBooleanVariable"
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "MicToggle",
+                    "Text",
+                    "=",
+                    "\"MIC: ON\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "MicIcon",
+                    "Animation",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
                   },
                   "parameters": [
                     "MicEnabled",
                     "False",
                     ""
                   ]
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
@@ -9448,48 +9553,13 @@
                 },
                 {
                   "type": {
-                    "value": "ChangeColor"
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
                   },
                   "parameters": [
                     "MicIcon",
-                    "\"255;0;0\""
-                  ]
-                }
-              ]
-            },
-            {
-              "aiGeneratedEventId": "01KSK0RQZ2VPKVHVNQ0JXMAWD6",
-              "type": "BuiltinCommonInstructions::Else",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "MicEnabled",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "MicToggle",
-                    "Text",
+                    "Animation",
                     "=",
-                    "\"MIC: ON\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "MicIcon",
-                    "\"0;255;0\""
+                    "1"
                   ]
                 }
               ]
@@ -10162,8 +10232,8 @@
         },
         {
           "name": "MicEnabled",
-          "type": "string",
-          "value": "null"
+          "type": "boolean",
+          "value": true
         },
         {
           "name": "Transitioning",
@@ -10514,7 +10584,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 292,
+          "height": 792,
           "keepRatio": true,
           "layer": "UI",
           "name": "FadeTransition",
@@ -13418,158 +13488,6 @@
               ]
             }
           ]
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "MicToggle",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "MIC: ON",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "MIC: ON",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
-            "lineHeight": 0,
-            "color": "255;255;255"
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "14b5026b3b61d8fe271e2ee2411064510735d5b0913ea583e8c2c7c7fd663ca3",
-          "name": "MicIcon",
-          "persistentUuid": "ed99035e-a942-4505-b497-b29d143b143d",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mic_Icon_1.4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 1024
-                          },
-                          {
-                            "x": 0,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mic_Icon_1.5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 1024
-                          },
-                          {
-                            "x": 0,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "objectsFolderStructure": {
@@ -13643,12 +13561,6 @@
           },
           {
             "objectName": "NEXT_LEVEL_BUTTON"
-          },
-          {
-            "objectName": "MicToggle"
-          },
-          {
-            "objectName": "MicIcon"
           }
         ]
       },
@@ -15436,15 +15348,6 @@
             },
             {
               "type": {
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "MicIcon",
-                "\"0;255;0\""
-              ]
-            },
-            {
-              "type": {
                 "value": "Show"
               },
               "parameters": [
@@ -15460,6 +15363,17 @@
                 "MicIcon",
                 "\"UI\""
               ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "MicIcon",
+                "Animation",
+                "=",
+                "0"
+              ]
             }
           ]
         },
@@ -15472,7 +15386,7 @@
                 "value": "IsCursorOnObject"
               },
               "parameters": [
-                "MicToggle",
+                "MicIcon",
                 "",
                 "",
                 ""
@@ -15494,7 +15408,18 @@
               "parameters": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "MicEnabled",
+                "Toggle",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -15513,14 +15438,43 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetBooleanVariable"
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "MicToggle",
+                    "Text",
+                    "=",
+                    "\"MIC: ON\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "MicIcon",
+                    "Animation",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
                   },
                   "parameters": [
                     "MicEnabled",
                     "False",
                     ""
                   ]
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
@@ -15534,47 +15488,13 @@
                 },
                 {
                   "type": {
-                    "value": "ChangeColor"
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
                   },
                   "parameters": [
                     "MicIcon",
-                    "\"255;0;0\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Else",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "MicEnabled",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "MicToggle",
-                    "Text",
+                    "Animation",
                     "=",
-                    "\"MIC: ON\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "MicIcon",
-                    "\"0;255;0\""
+                    "1"
                   ]
                 }
               ]
@@ -16096,7 +16016,7 @@
           "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "isLocked": true,
+          "isLocked": false,
           "name": "UI",
           "renderingType": "",
           "visibility": true,
@@ -16169,7 +16089,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.8464571843451619,
+        "zoomFactor": 3.641996543014231,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -16198,8 +16118,8 @@
         },
         {
           "name": "MicEnabled",
-          "type": "string",
-          "value": "null"
+          "type": "boolean",
+          "value": true
         },
         {
           "name": "EndingPlaying",
@@ -19624,158 +19544,6 @@
               ]
             }
           ]
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "MicToggle",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "MIC: ON",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "MIC: ON",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
-            "lineHeight": 0,
-            "color": "255;255;255"
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "c8555b45320a7030ce17029b1af5be2ea5c784f78e891928e0c8fd800f9ee863",
-          "name": "MicIcon",
-          "persistentUuid": "0e1030cd-eea2-43dd-bb59-183d015b9a35",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mic_Icon_1.6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 1024
-                          },
-                          {
-                            "x": 0,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mic_Icon_1.7.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 0
-                          },
-                          {
-                            "x": 768,
-                            "y": 1024
-                          },
-                          {
-                            "x": 0,
-                            "y": 1024
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "objectsFolderStructure": {
@@ -19876,12 +19644,6 @@
           },
           {
             "objectName": "Sliding_Bar_F"
-          },
-          {
-            "objectName": "MicToggle"
-          },
-          {
-            "objectName": "MicIcon"
           }
         ]
       },
@@ -20084,15 +19846,6 @@
             },
             {
               "type": {
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "MicIcon",
-                "\"0;255;0\""
-              ]
-            },
-            {
-              "type": {
                 "value": "Show"
               },
               "parameters": [
@@ -20107,6 +19860,17 @@
               "parameters": [
                 "MicIcon",
                 "\"UI\""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "MicIcon",
+                "Animation",
+                "=",
+                "0"
               ]
             }
           ]
@@ -22238,7 +22002,7 @@
                 "value": "IsCursorOnObject"
               },
               "parameters": [
-                "MicToggle",
+                "MicIcon",
                 "",
                 "",
                 ""
@@ -22260,7 +22024,18 @@
               "parameters": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "MicEnabled",
+                "Toggle",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -22279,14 +22054,43 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetBooleanVariable"
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "MicToggle",
+                    "Text",
+                    "=",
+                    "\"MIC: ON\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "MicIcon",
+                    "Animation",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
                   },
                   "parameters": [
                     "MicEnabled",
                     "False",
                     ""
                   ]
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
@@ -22300,47 +22104,13 @@
                 },
                 {
                   "type": {
-                    "value": "ChangeColor"
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
                   },
                   "parameters": [
                     "MicIcon",
-                    "\"255;0;0\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Else",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "MicEnabled",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "MicToggle",
-                    "Text",
+                    "Animation",
                     "=",
-                    "\"MIC: ON\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "MicIcon",
-                    "\"0;255;0\""
+                    "1"
                   ]
                 }
               ]
