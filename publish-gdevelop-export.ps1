@@ -413,6 +413,23 @@ if ($index -notmatch 'id="yodel-mobile-controls"') {
     Write-Host "Injected mobile DOM controls."
 }
 
+# Mute audio when the player navigates away from the tab, resume on return.
+$visibilityScript = @'
+	<script>
+	document.addEventListener('visibilitychange', function() {
+		if (typeof Howler !== 'undefined') {
+			Howler.mute(document.hidden);
+		}
+	});
+	</script>
+'@
+$index = Get-Content -Raw -LiteralPath $indexPath
+if ($index -notmatch 'visibilitychange') {
+    $index = $index.Replace("</body>", "$visibilityScript</body>")
+    Set-Content -LiteralPath $indexPath -Value $index -NoNewline
+    Write-Host "Injected tab visibility audio mute."
+}
+
 # GDevelop's cursor-on-object check can still hit hidden objects. On itch.io,
 # the click/touch used to start the iframe can carry into LEVEL 1 and trigger
 # the hidden next-level button unless we also require the button to be visible.
