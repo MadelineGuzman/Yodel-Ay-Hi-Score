@@ -21,7 +21,7 @@ gdjs.WinSceneCode.GDJump_9595Arrow_9595ButtonObjects1= [];
 gdjs.WinSceneCode.GDJump_9595Arrow_9595ButtonObjects2= [];
 
 
-gdjs.WinSceneCode.userFunc0xa2c258 = function GDJSInlineCode(runtimeScene) {
+gdjs.WinSceneCode.userFunc0xd7b348 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // CodexTotalCollectibles display
 const total = runtimeScene.getGame().getVariables().get('TotalScoreCollectibles').getAsNumber();
@@ -34,19 +34,19 @@ gdjs.WinSceneCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.WinSceneCode.userFunc0xa2c258(runtimeScene);
+gdjs.WinSceneCode.userFunc0xd7b348(runtimeScene);
 
 }
 
 
 };gdjs.WinSceneCode.mapOfGDgdjs_9546WinSceneCode_9546GDPlay_95959595Again_95959595ButtonObjects1Objects = Hashtable.newFrom({"Play_Again_Button": gdjs.WinSceneCode.GDPlay_9595Again_9595ButtonObjects1});
-gdjs.WinSceneCode.asyncCallback11366940 = function (runtimeScene, asyncObjectsList) {
+gdjs.WinSceneCode.asyncCallback12740428 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.WinSceneCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "LEVEL 1", false);
 }
 gdjs.WinSceneCode.localVariables.length = 0;
 }
-gdjs.WinSceneCode.idToCallbackMap.set(11366940, gdjs.WinSceneCode.asyncCallback11366940);
+gdjs.WinSceneCode.idToCallbackMap.set(12740428, gdjs.WinSceneCode.asyncCallback12740428);
 gdjs.WinSceneCode.eventsList1 = function(runtimeScene) {
 
 {
@@ -56,7 +56,7 @@ gdjs.WinSceneCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.WinSceneCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.WinSceneCode.asyncCallback11366940(runtimeScene, asyncObjectsList)), 11366940, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.WinSceneCode.asyncCallback12740428(runtimeScene, asyncObjectsList)), 12740428, asyncObjectsList);
 }
 }
 

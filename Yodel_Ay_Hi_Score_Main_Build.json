@@ -8323,7 +8323,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -8355,7 +8355,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "900 + (MicVolume - 0.15) / 0.85 * 2500"
+                "900 + (MicVolume - 0.08) / 0.92 * 2500"
               ]
             },
             {
@@ -8390,7 +8390,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -8459,7 +8459,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "900 + (MicVolume - 0.15) / 0.85 * 2500"
+                "900 + (MicVolume - 0.08) / 0.92 * 2500"
               ]
             },
             {
@@ -8574,7 +8574,7 @@
               "parameters": [
                 "MicVolume",
                 "<",
-                "0.15"
+                "0.08"
               ]
             }
           ],
@@ -8647,7 +8647,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             }
           ],
@@ -8675,7 +8675,7 @@
               "parameters": [
                 "MicVolume",
                 "<",
-                "0.10"
+                "0.05"
               ]
             }
           ],
@@ -9823,23 +9823,6 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "500"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
@@ -9848,7 +9831,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -9940,6 +9923,61 @@
                 "PlatformerObject",
                 "=",
                 "-150"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "MicVolume",
+                "<",
+                "0.08"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "500"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "500"
               ]
             }
           ]
@@ -10062,10 +10100,6 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "ScreenWrap",
-          "type": "ScreenWrap::ScreenWrap"
         },
         {
           "name": "Text",
@@ -13946,7 +13980,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -13978,7 +14012,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "900 + (MicVolume - 0.15) / 0.85 * 5000"
+                "900 + (MicVolume - 0.08) / 0.92 * 5000"
               ]
             },
             {
@@ -14013,7 +14047,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -14082,7 +14116,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "900 + (MicVolume - 0.15) / 0.85 * 5000"
+                "900 + (MicVolume - 0.08) / 0.92 * 5000"
               ]
             },
             {
@@ -14382,7 +14416,7 @@
               "parameters": [
                 "MicVolume",
                 "<",
-                "0.15"
+                "0.08"
               ]
             }
           ],
@@ -14455,7 +14489,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             }
           ],
@@ -14483,7 +14517,7 @@
               "parameters": [
                 "MicVolume",
                 "<",
-                "0.10"
+                "0.05"
               ]
             }
           ],
@@ -15825,23 +15859,6 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "1000"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
@@ -15850,7 +15867,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -15942,6 +15959,61 @@
                 "PlatformerObject",
                 "=",
                 "-200"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "MicVolume",
+                "<",
+                "0.08"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "1000"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "1000"
               ]
             }
           ]
@@ -16064,10 +16136,6 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "ScreenWrap",
-          "type": "ScreenWrap::ScreenWrap"
         },
         {
           "name": "Text",
@@ -17497,1014 +17565,6 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "idle down3",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "idle left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_idle left.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "idle right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_idle right.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "idle up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_idle up.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined idle down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined idle down_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined idle left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined idle left_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined idle right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined idle right_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined idle up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined idle up_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined walk down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk down_1_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk down_2_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined walk left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk left_1_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk left_2_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined walk right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk right_1_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk right_2_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "outlined walk up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk up_1_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_outlined walk up_2_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "walk down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.1667,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk down_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk down_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "walk left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.1667,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk left_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk left_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "walk right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.1667,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk right_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk right_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "walk up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.1667,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk up_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 5
-                          },
-                          {
-                            "x": 64,
-                            "y": 58
-                          },
-                          {
-                            "x": 9,
-                            "y": 58
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Player_walk up_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -21486,7 +20546,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -21518,7 +20578,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "400 + (MicVolume - 0.15) / 0.85 * 6000"
+                "400 + (MicVolume - 0.08) / 0.92 * 6000"
               ]
             },
             {
@@ -21553,7 +20613,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -21622,7 +20682,7 @@
                 "Player",
                 "PlatformerObject",
                 "=",
-                "400 + (MicVolume - 0.15) / 0.85 * 6000"
+                "400 + (MicVolume - 0.08) / 0.92 * 6000"
               ]
             },
             {
@@ -21879,7 +20939,7 @@
               "parameters": [
                 "MicVolume",
                 "<",
-                "0.15"
+                "0.08"
               ]
             }
           ],
@@ -21952,7 +21012,7 @@
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             }
           ],
@@ -21980,7 +21040,7 @@
               "parameters": [
                 "MicVolume",
                 "<",
-                "0.10"
+                "0.05"
               ]
             }
           ],
@@ -23562,40 +22622,12 @@
           "conditions": [
             {
               "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "EndingPlaying",
-                "False",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::Gravity"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "200"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "NumberVariable"
               },
               "parameters": [
                 "MicVolume",
                 ">",
-                "0.15"
+                "0.08"
               ]
             },
             {
@@ -23707,6 +22739,81 @@
                 "PlatformerObject",
                 "=",
                 "-80"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "MicVolume",
+                "<",
+                "0.08"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "200"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "EndingPlaying",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Gravity"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "200"
               ]
             }
           ]
@@ -23829,10 +22936,6 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "ScreenWrap",
-          "type": "ScreenWrap::ScreenWrap"
         },
         {
           "name": "Text",
