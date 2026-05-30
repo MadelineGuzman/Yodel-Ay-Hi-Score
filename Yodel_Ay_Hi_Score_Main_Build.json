@@ -2703,35 +2703,6 @@
           ]
         },
         {
-          "aiGeneratedEventId": "01KSR2A3RKXBCNSA5MRCY6CR41",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"SplashTimer\"",
-                ">",
-                "0.5"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"HowToPlay\"",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
           "aiGeneratedEventId": "01KSB9NJEE9R7VMHFS6MEARZEB",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
