@@ -2272,6 +2272,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 777,
+          "keepRatio": true,
+          "layer": "",
+          "name": "SplashImage",
+          "persistentUuid": "7ca4b40a-5e49-41c2-9ffd-bfa34a8dee48",
+          "width": 797,
+          "x": 2,
+          "y": 1,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -2653,6 +2670,7 @@
       },
       "events": [
         {
+          "aiGeneratedEventId": "01KSXG6FHJJF3V3VBPB6T4HA06",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2673,10 +2691,22 @@
                 "",
                 "\"SplashTimer\""
               ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "BlackFadeSprite",
+                "Opacity",
+                "=",
+                "0"
+              ]
             }
           ]
         },
         {
+          "aiGeneratedEventId": "01KSXG6Y1PSJ4XFSGN9MF6E3F5",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2695,6 +2725,38 @@
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "BlackFadeSprite",
+                "Tween",
+                "\"FadeIn\"",
+                "255",
+                "\"linear\"",
+                "1.5",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KSXG7875205AWJSSP6VS1J17",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
+              },
+              "parameters": [
+                "BlackFadeSprite",
+                "Tween",
+                "\"FadeIn\""
+              ]
             }
           ],
           "actions": [

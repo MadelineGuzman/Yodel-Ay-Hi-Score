@@ -37,16 +37,12 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1);
-{for(var i = 0, len = gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1.length ;i < len;++i) {
-    gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i].getBehavior("Opacity").setOpacity(255);
-}
-}
-{for(var i = 0, len = gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1.length ;i < len;++i) {
-    gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i].getBehavior("Tween").addObjectOpacityTween2("FadeInSplash", 0, "linear", 0.75, false);
-}
-}
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "SplashTimer");
 }
+{for(var i = 0, len = gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1.length ;i < len;++i) {
+    gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i].getBehavior("Opacity").setOpacity(0);
+}
+}
 }
 
 }
@@ -57,25 +53,16 @@ gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 0.5;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 1.0;
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "HowToPlay", false);
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 2.5;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(15115676);
+}
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1);
 {for(var i = 0, len = gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1.length ;i < len;++i) {
-    gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i].getBehavior("Tween").addObjectOpacityTween2("FadeOutSplash", 255, "linear", 0.75, false);
+    gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i].getBehavior("Tween").addObjectOpacityTween2("FadeIn", 255, "linear", 1.5, false);
 }
 }
 }
@@ -85,10 +72,18 @@ gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("BlackFadeSprite"), gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 3.25;
+for (var i = 0, k = 0, l = gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1.length;i<l;++i) {
+    if ( gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i].getBehavior("Tween").hasFinished("FadeIn") ) {
+        isConditionTrue_0 = true;
+        gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[k] = gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1[i];
+        ++k;
+    }
+}
+gdjs.SplashScreenCode.GDBlackFadeSpriteObjects1.length = k;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "TitleScreen", false);
 }

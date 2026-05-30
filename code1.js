@@ -38,6 +38,8 @@ gdjs.copyArray(runtimeScene.getObjects("StartText"), gdjs.TitleScreenCode.GDStar
 }
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Main_Amb_2_v2.wav", 10, true, 45, 1);
 }
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "TitleTimer");
+}
 }
 
 }
@@ -122,11 +124,20 @@ if(isConditionTrue_1) {
 }
 }
 if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "TitleTimer") > 3.0;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16301884);
+}
+}
+}
+if (isConditionTrue_0) {
 {gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 10);
 }
 {gdjs.evtTools.window.setFullScreen(runtimeScene, true, true);
 }
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "LEVEL 1", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "HowToPlay", false);
 }
 }
 
@@ -161,7 +172,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.TitleScreenCode.mapOfGDgdjs_9546TitleScreenCode_9546GDCreditsButtonObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(11377820);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16303516);
 }
 }
 }

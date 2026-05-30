@@ -9,7 +9,7 @@ gdjs.evtsExt__MicrophoneInput__VolumeIsAbove = {};
 gdjs.evtsExt__MicrophoneInput__VolumeIsAbove.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__MicrophoneInput__VolumeIsAbove.userFunc0xfef1d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__MicrophoneInput__VolumeIsAbove.userFunc0xbd8100 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const threshold = eventsFunctionContext.getArgument("threshold");
 const microphoneInput = gdjs.__microphoneInputExtension
@@ -24,7 +24,7 @@ gdjs.evtsExt__MicrophoneInput__VolumeIsAbove.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__MicrophoneInput__VolumeIsAbove.userFunc0xfef1d8(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__MicrophoneInput__VolumeIsAbove.userFunc0xbd8100(runtimeScene, eventsFunctionContext);
 
 }
 
