@@ -399,6 +399,28 @@ if ($index -notmatch 'id="yodel-mobile-controls"') {
     Write-Host "Injected mobile DOM controls."
 }
 
+# Block phantom touch/click events for 1500ms after game start.
+# Mobile browsers fire touch events during page navigation that carry into the
+# game and skip the title screen before the player intends to interact.
+$phantomBlockScript = @'
+        var inputUnblockTime = Date.now() + 1500;
+        var blockPhantomInput = function(e) {
+            if (Date.now() < inputUnblockTime) {
+                e.stopPropagation();
+            }
+        };
+        document.addEventListener('touchstart', blockPhantomInput, { capture: true, passive: true });
+        document.addEventListener('mousedown', blockPhantomInput, { capture: true });
+        document.addEventListener('pointerdown', blockPhantomInput, { capture: true });
+
+'@
+$index = Get-Content -Raw -LiteralPath $indexPath
+if ($index -notmatch 'blockPhantomInput') {
+    $index = $index.Replace("        //Initialization", "$phantomBlockScript        //Initialization")
+    Set-Content -LiteralPath $indexPath -Value $index -NoNewline
+    Write-Host "Injected phantom-touch blocker."
+}
+
 # Mute audio when the player navigates away from the tab, resume on return.
 $visibilityScript = @'
 	<script>
