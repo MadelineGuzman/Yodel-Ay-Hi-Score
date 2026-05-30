@@ -3157,6 +3157,15 @@
                 "45",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"TitleTimer\""
+              ]
             }
           ]
         },
@@ -3260,6 +3269,17 @@
                     ""
                   ]
                 }
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"TitleTimer\"",
+                ">",
+                "1.0"
               ]
             }
           ],
