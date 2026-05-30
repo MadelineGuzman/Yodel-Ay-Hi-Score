@@ -2940,15 +2940,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 55,
           "keepRatio": true,
           "layer": "",
           "name": "CreditsButton",
           "persistentUuid": "0c716d90-6b12-4a91-a4dc-d1f016fefc12",
-          "width": 0,
-          "x": 400,
-          "y": 500,
+          "width": 152,
+          "x": 2,
+          "y": 10,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -3071,6 +3072,7 @@
           "bold": false,
           "italic": false,
           "name": "CreditsButton",
+          "persistentUuid": "a6dfc32a-2f7e-4456-9672-bdc0dfbbcaa2",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -3080,7 +3082,7 @@
           "string": "Credits",
           "font": "",
           "textAlignment": "center",
-          "characterSize": 30,
+          "characterSize": 40,
           "color": {
             "b": 255,
             "g": 255,
@@ -3088,11 +3090,11 @@
           },
           "content": {
             "bold": false,
-            "isOutlineEnabled": false,
+            "isOutlineEnabled": true,
             "isShadowEnabled": false,
             "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 4,
             "shadowAngle": 90,
             "shadowBlurRadius": 2,
             "shadowColor": "0;0;0",
@@ -3104,7 +3106,7 @@
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
-            "characterSize": 30,
+            "characterSize": 40,
             "lineHeight": 0,
             "color": "255;255;255"
           }
@@ -4016,6 +4018,30 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"HowToPlayTimer\""
+              ]
+            }
+          ]
+        },
+        {
           "aiGeneratedEventId": "01KSR2SAB2527VTE91GY81DVAD",
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -4225,6 +4251,23 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"HowToPlayTimer\"",
+                ">",
+                "2.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -24391,7 +24434,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Yodel-Ay-Hi-Score\nCreated by Syzygy Gaming\n\nBuilt with:\nGDevelop\nWeb Audio API\nREAPER\n\nVisual assets:\nSelected environment, platformer, sign, UI, and decorative assets by Kenney.\nIncludes assets from Foliage Pack, Pixel Platformer, and Sokoban.\nLicense: Creative Commons CC0 1.0 Universal\nhttps://www.kenney.nl\nAttribution not required, but appreciated.\n\nOriginal background art, UI icons, and selected custom visual assets:\nCreated by Syzygy Gaming with assistance from ChatGPT/OpenAI.\nEdited and integrated by Syzygy Gaming.\n\nAudio:\nTitle, Level 1, and Level 2 ambience:\nBased on \"swissbalcony.wav\" by Zozzy\nSource: https://freesound.org/s/59723/\nLicense: Creative Commons CC0 1.0 Universal\nModified in REAPER by Syzygy Gaming.\n\nUFO takeoff sound:\nBased on \"Trill Whistle.wav\" by dland\nSource: https://freesound.org/s/74388/\nLicense: Creative Commons CC0 1.0 Universal\nModified in REAPER by Syzygy Gaming.\n\nTemporary yodel/fall vocal sound:\nBased on \"07700 male falling yodelling voice.wav\" by Robinhood76\nSource: https://freesound.org/s/183180/\nLicense: Creative Commons Attribution NonCommercial 4.0\nModified in REAPER by Syzygy Gaming.\nNote: This sound is temporary and will be replaced.\n\nAdditional audio editing and implementation:\nSyzygy Gaming\n\nAI assistance:\nChatGPT/OpenAI was used for coding assistance, troubleshooting, and selected AI-assisted visual asset generation.\nGame design, level design, creative direction, implementation decisions, and final assembly by Syzygy Gaming.",
+          "string": "Yodel-Ay-Hi-Score\nCreated by Syzygy Gaming\n\nBuilt with:\nGDevelop\nWeb Audio API\nREAPER\n\nVisual assets:\nSelected environment, platformer, sign, UI, and decorative assets by Kenney.\nIncludes assets from Foliage Pack, Pixel Platformer, and Sokoban.\nLicense: Creative Commons CC0 1.0 Universal\nhttps://www.kenney.nl\nAttribution not required, but appreciated.\n\nOriginal background art, UI icons, and selected custom visual assets:\nCreated by Syzygy Gaming with assistance from ChatGPT/OpenAI.\nEdited and integrated by Syzygy Gaming.\n\nAudio:\nTitle, Level 1, and Level 2 ambience:\nBased on \"swissbalcony.wav\" by Zozzy\nSource: https://freesound.org/s/59723/\nLicense: Creative Commons CC0 1.0 Universal\nModified in REAPER by Syzygy Gaming.\n\nUFO takeoff sound:\nBased on \"Trill Whistle.wav\" by dland\nSource: https://freesound.org/s/74388/\nLicense: Creative Commons CC0 1.0 Universal\n\n\nModified in REAPER by Syzygy Gaming.\n\nTemporary yodel/fall vocal sound:\nBased on \"07700 male falling yodelling voice.wav\" by Robinhood76\nSource: https://freesound.org/s/183180/\nLicense: Creative Commons Attribution NonCommercial 4.0\nModified in REAPER by Syzygy Gaming.\nNote: This sound is temporary and will be replaced.\n\nAdditional audio editing and implementation:\nSyzygy Gaming\n\nAI assistance:\nChatGPT/OpenAI was used for coding assistance, troubleshooting, and selected AI-assisted visual asset generation.\nGame design, level design, creative direction, implementation decisions, and final assembly by Syzygy Gaming.",
           "font": "",
           "textAlignment": "left",
           "characterSize": 24,
@@ -24414,7 +24457,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Yodel-Ay-Hi-Score\nCreated by Syzygy Gaming\n\nBuilt with:\nGDevelop\nWeb Audio API\nREAPER\n\nVisual assets:\nSelected environment, platformer, sign, UI, and decorative assets by Kenney.\nIncludes assets from Foliage Pack, Pixel Platformer, and Sokoban.\nLicense: Creative Commons CC0 1.0 Universal\nhttps://www.kenney.nl\nAttribution not required, but appreciated.\n\nOriginal background art, UI icons, and selected custom visual assets:\nCreated by Syzygy Gaming with assistance from ChatGPT/OpenAI.\nEdited and integrated by Syzygy Gaming.\n\nAudio:\nTitle, Level 1, and Level 2 ambience:\nBased on \"swissbalcony.wav\" by Zozzy\nSource: https://freesound.org/s/59723/\nLicense: Creative Commons CC0 1.0 Universal\nModified in REAPER by Syzygy Gaming.\n\nUFO takeoff sound:\nBased on \"Trill Whistle.wav\" by dland\nSource: https://freesound.org/s/74388/\nLicense: Creative Commons CC0 1.0 Universal\nModified in REAPER by Syzygy Gaming.\n\nTemporary yodel/fall vocal sound:\nBased on \"07700 male falling yodelling voice.wav\" by Robinhood76\nSource: https://freesound.org/s/183180/\nLicense: Creative Commons Attribution NonCommercial 4.0\nModified in REAPER by Syzygy Gaming.\nNote: This sound is temporary and will be replaced.\n\nAdditional audio editing and implementation:\nSyzygy Gaming\n\nAI assistance:\nChatGPT/OpenAI was used for coding assistance, troubleshooting, and selected AI-assisted visual asset generation.\nGame design, level design, creative direction, implementation decisions, and final assembly by Syzygy Gaming.",
+            "text": "Yodel-Ay-Hi-Score\nCreated by Syzygy Gaming\n\nBuilt with:\nGDevelop\nWeb Audio API\nREAPER\n\nVisual assets:\nSelected environment, platformer, sign, UI, and decorative assets by Kenney.\nIncludes assets from Foliage Pack, Pixel Platformer, and Sokoban.\nLicense: Creative Commons CC0 1.0 Universal\nhttps://www.kenney.nl\nAttribution not required, but appreciated.\n\nOriginal background art, UI icons, and selected custom visual assets:\nCreated by Syzygy Gaming with assistance from ChatGPT/OpenAI.\nEdited and integrated by Syzygy Gaming.\n\nAudio:\nTitle, Level 1, and Level 2 ambience:\nBased on \"swissbalcony.wav\" by Zozzy\nSource: https://freesound.org/s/59723/\nLicense: Creative Commons CC0 1.0 Universal\nModified in REAPER by Syzygy Gaming.\n\nUFO takeoff sound:\nBased on \"Trill Whistle.wav\" by dland\nSource: https://freesound.org/s/74388/\nLicense: Creative Commons CC0 1.0 Universal\n\n\nModified in REAPER by Syzygy Gaming.\n\nTemporary yodel/fall vocal sound:\nBased on \"07700 male falling yodelling voice.wav\" by Robinhood76\nSource: https://freesound.org/s/183180/\nLicense: Creative Commons Attribution NonCommercial 4.0\nModified in REAPER by Syzygy Gaming.\nNote: This sound is temporary and will be replaced.\n\nAdditional audio editing and implementation:\nSyzygy Gaming\n\nAI assistance:\nChatGPT/OpenAI was used for coding assistance, troubleshooting, and selected AI-assisted visual asset generation.\nGame design, level design, creative direction, implementation decisions, and final assembly by Syzygy Gaming.",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -24428,6 +24471,7 @@
           "bold": false,
           "italic": false,
           "name": "BackButton",
+          "persistentUuid": "83ee77bb-d6c2-4a47-a66a-8f3569992ce1",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
