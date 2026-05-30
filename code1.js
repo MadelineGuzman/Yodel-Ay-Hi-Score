@@ -125,11 +125,7 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "TitleTimer") > 3.0;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16301884);
-}
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13276940);
 }
 }
 if (isConditionTrue_0) {
@@ -172,7 +168,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.TitleScreenCode.mapOfGDgdjs_9546TitleScreenCode_9546GDCreditsButtonObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16303516);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13279420);
 }
 }
 }

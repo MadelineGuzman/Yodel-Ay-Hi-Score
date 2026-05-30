@@ -56,7 +56,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "SplashTimer") > 1.0;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(15115676);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12726932);
 }
 }
 if (isConditionTrue_0) {

@@ -661,7 +661,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16943588);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(17354356);
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(1);

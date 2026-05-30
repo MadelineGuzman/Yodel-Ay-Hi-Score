@@ -42,6 +42,20 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "HowToPlayTimer");
+}
+}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BlackBackgroundDrawer"), gdjs.HowToPlayCode.GDBlackBackgroundDrawerObjects1);
 gdjs.copyArray(runtimeScene.getObjects("StartPromptText"), gdjs.HowToPlayCode.GDStartPromptTextObjects1);
 {for(var i = 0, len = gdjs.HowToPlayCode.GDBlackBackgroundDrawerObjects1.length ;i < len;++i) {
@@ -163,6 +177,15 @@ if(isConditionTrue_1) {
 }
 }
 {
+}
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "HowToPlayTimer") > 2.0;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9712060);
+}
 }
 }
 if (isConditionTrue_0) {
