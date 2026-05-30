@@ -3281,17 +3281,6 @@
             },
             {
               "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"TitleTimer\"",
-                ">",
-                "3.0"
-              ]
-            },
-            {
-              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
