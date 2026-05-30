@@ -419,7 +419,7 @@ if ($index -notmatch 'visibilitychange') {
 # GDevelop's cursor-on-object check can still hit hidden objects. On itch.io,
 # the click/touch used to start the iframe can carry into LEVEL 1 and trigger
 # the hidden next-level button unless we also require the button to be visible.
-$level1CodePath = Join-Path $workspace "code2.js"
+$level1CodePath = Join-Path $workspace "code3.js"
 if (Test-Path -LiteralPath $level1CodePath) {
     $level1Code = Get-Content -Raw -LiteralPath $level1CodePath
     if ($level1Code -notmatch 'GDNEXT_9595LEVEL_9595BUTTONObjects1\[i\]\.isVisible\(\)') {
