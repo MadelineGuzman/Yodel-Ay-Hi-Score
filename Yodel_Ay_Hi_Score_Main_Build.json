@@ -14957,7 +14957,7 @@
               },
               "parameters": [
                 "",
-                "0.75",
+                "0.5",
                 "\"AirTime\""
               ]
             }
@@ -23294,11 +23294,10 @@
           "actions": [
             {
               "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                "value": "ChangeSprite"
               },
               "parameters": [
                 "Player",
-                "Animation",
                 "=",
                 "1"
               ]
