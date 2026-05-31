@@ -125,7 +125,7 @@ if(isConditionTrue_1) {
 }
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13276940);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16321252);
 }
 }
 if (isConditionTrue_0) {
@@ -168,7 +168,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.TitleScreenCode.mapOfGDgdjs_9546TitleScreenCode_9546GDCreditsButtonObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13279420);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16323812);
 }
 }
 }

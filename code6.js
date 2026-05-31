@@ -25,7 +25,7 @@ gdjs.WinSceneCode.GDMicToggleObjects1= [];
 gdjs.WinSceneCode.GDMicToggleObjects2= [];
 
 
-gdjs.WinSceneCode.userFunc0xf12ef8 = function GDJSInlineCode(runtimeScene) {
+gdjs.WinSceneCode.userFunc0xed6eb8 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // CodexTotalCollectibles display
 const total = runtimeScene.getGame().getVariables().get('TotalScoreCollectibles').getAsNumber();
@@ -38,19 +38,19 @@ gdjs.WinSceneCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.WinSceneCode.userFunc0xf12ef8(runtimeScene);
+gdjs.WinSceneCode.userFunc0xed6eb8(runtimeScene);
 
 }
 
 
 };gdjs.WinSceneCode.mapOfGDgdjs_9546WinSceneCode_9546GDPlay_95959595Again_95959595ButtonObjects1Objects = Hashtable.newFrom({"Play_Again_Button": gdjs.WinSceneCode.GDPlay_9595Again_9595ButtonObjects1});
-gdjs.WinSceneCode.asyncCallback17325300 = function (runtimeScene, asyncObjectsList) {
+gdjs.WinSceneCode.asyncCallback16938780 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.WinSceneCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "LEVEL 1", false);
 }
 gdjs.WinSceneCode.localVariables.length = 0;
 }
-gdjs.WinSceneCode.idToCallbackMap.set(17325300, gdjs.WinSceneCode.asyncCallback17325300);
+gdjs.WinSceneCode.idToCallbackMap.set(16938780, gdjs.WinSceneCode.asyncCallback16938780);
 gdjs.WinSceneCode.eventsList1 = function(runtimeScene) {
 
 {
@@ -60,7 +60,7 @@ gdjs.WinSceneCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.WinSceneCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.WinSceneCode.asyncCallback17325300(runtimeScene, asyncObjectsList)), 17325300, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.WinSceneCode.asyncCallback16938780(runtimeScene, asyncObjectsList)), 16938780, asyncObjectsList);
 }
 }
 
